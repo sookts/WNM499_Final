@@ -8,4 +8,5 @@ Sookie Park - https://github.com/sookts/WNM499_Final.git
 ###Tatsuma Nakano
 `https://github.com/Tatsuman/WNM499_Final.git`
 
-Jacky Meng https://github.com/JackyMeng/WNM499_Final.git
+###Jacky Meng 
+`https://github.com/JackyMeng/WNM499_Final.git`
