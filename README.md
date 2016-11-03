@@ -2,3 +2,6 @@
 Our sweet team project for wonderful Halmiton
 
 Amy Wu https://github.com/amyywu214/WNM499_Final.git
+
+Sookie Park - https://github.com/sookts/WNM499_Final.git
+
