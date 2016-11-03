@@ -1,0 +1,7 @@
+document.getElementById("navigationBar").innerHTML = ""
+	+"<ul>"
+		+"<li><a href='http://tatsuma.co/AAU/WNM499/WNM499_Final'>Story</a></li>"
+		+"<li><a href='http://tatsuma.co/AAU/WNM499/WNM499_Final/game'>Game</a></li>"
+		+"<li><a href='http://tatsuma.co/AAU/WNM499/WNM499_Final/about'>About This Game</a></li>"
+		+"<li><a href='http://tatsuma.co/AAU/WNM499/WNM499_Final/process'>Process</a></li>"
+	+"</ul>"
