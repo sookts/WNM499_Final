@@ -32,6 +32,9 @@ html,body{
 		border-radius: 3px;
 		text-align: center;
 		color: white;
+		&:focus{
+			outline: none;
+		}
 	}
 }
 

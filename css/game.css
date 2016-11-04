@@ -29,6 +29,8 @@ html, body {
     border-radius: 3px;
     text-align: center;
     color: white; }
+    #questionWindow input:focus {
+      outline: none; }
 
 #hintDisplay {
   position: absolute; }

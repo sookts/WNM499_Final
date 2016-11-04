@@ -26,7 +26,7 @@ var qaJSON = {
 			"answer":"umbrella"
 		},
 		{
-			"question":"If I drink, I die. If i eat, I am fine. What am I?",
+			"question":"If I drink, I die. If I eat, I am fine. What am I?",
 			"answer":"fire"
 		},
 		{
@@ -91,10 +91,12 @@ var qaJSON = {
 var currentStep;
 var hp;
 var currentLevel;
+var result;
+
 var currentQuestion;
-var initialize = true;
 var questionNumber;
 
+var initialize = true;
 if(initialize == true){
 	init();
 	displayQuestion(qaJSON,levelControl());
@@ -144,7 +146,7 @@ function displayQuestion(qa,lv){
 }
 
 function displayResult(rw){
-	var result;
+	
 	switch (rw){
 		case 0:
 			result = "WRONG!"
@@ -232,7 +234,7 @@ function levelControl(){
 		console.log("clear");
 		return "clear"
 	}else{
-		cno("Something went wrong!")
+		console.error("Something went wrong!")
 	}
 }
 
@@ -245,10 +247,6 @@ function gameClear(){
 	alert("Game Clear!");
 	init();
 	window.location.href = 'http://tatsuma.co/AAU/WNM499/WNM499_Final/clear'
-}
-
-function showHintDuration(){
-
 }
 
 function showHint(qa,lv){
