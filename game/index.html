@@ -12,26 +12,25 @@
 <nav id="navigationBar"></nav>
 <script type="text/javascript" src="../js/nav.js"></script><!-- Load Navigation Bar -->
 
-<label id="resultDisplay"></label>
+	<p id="resultDisplay"></p>
 	<p id="hpDisplay"></p>
 	<p id="levelDisplay"></p>
 	
 	<div id="questionWindow">
 		<p id="questionDisplay"></p>
+		<div id="hintDisplay">
+			<span>test</span>
+		</div>
 		<input id="userAnswerInput" type="text">
-		<span id="hintDisplay">test</span>
-		
-		
 	</div>
 
-	<canvas id="canvas"></canvas>
-	<!-- <script>
-      window.onload = function(){
-        document.getElementById("anvas").width = window.innerWidth;
-        document.getElementById("anvas").height = window.innerHeight;
-      }
-    </script> -->
+	<canvas id="canvas" width="getCanvasWidth()" height="getCanvasHeight()"></canvas>
+	
 </body>
 <script type="text/javascript" src="../js/script.js"></script>
 <script type="text/javascript" src="../js/view.js"></script>
+<script>
+	document.getElementById("canvas").width = window.innerWidth;
+	document.getElementById("canvas").height = window.innerHeight;
+</script>
 </html>

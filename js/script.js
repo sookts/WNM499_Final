@@ -1,7 +1,3 @@
-/*
-Tatsuma's Memo
-How to not shows the question that already used
-*/
 
 
 'use strict'
@@ -103,6 +99,7 @@ if(initialize == true){
 	initialize = false;
 }
 
+
 //Initialize
 function init(){
 	var resultDisplay = document.getElementById("resultDisplay");
@@ -147,16 +144,20 @@ function displayQuestion(qa,lv){
 
 function displayResult(rw){
 	
+	var color;
 	switch (rw){
 		case 0:
 			result = "WRONG!"
+			color = "#ff6571"
 		break;
 		case 1:
 			result = "RIGHT!"
+			color = "#65ff89"
 		break;
 	}
 	var resultDisplay = document.getElementById("resultDisplay");
 	resultDisplay.innerHTML = result;
+	resultDisplay.style.color = color;
 }
 
 // @param {object} the question and answer from JSON
@@ -249,9 +250,11 @@ function gameClear(){
 	window.location.href = 'http://tatsuma.co/AAU/WNM499/WNM499_Final/clear'
 }
 
+// var displayHintTimer = setInterval(something,1000)
+
 function showHint(qa,lv){
 	// var thisQuestion = qa[lv][questionNumber];
-	var histDisplay = document.getElementById("histDisplay");
+	var hintDisplay = document.getElementById("histDisplay");
 	for(var i = 0; i < qa[lv][questionNumber].answer.length; i++){
 		setTimeout(
 			function(){
