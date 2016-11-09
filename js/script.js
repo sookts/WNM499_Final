@@ -1,7 +1,3 @@
-/*
-Tatsuma's Memo
-How to not shows the question that already used
-*/
 
 
 'use strict'
@@ -26,7 +22,7 @@ var qaJSON = {
 			"answer":"umbrella"
 		},
 		{
-			"question":"If I drink, I die. If i eat, I am fine. What am I?",
+			"question":"If I drink, I die. If I eat, I am fine. What am I?",
 			"answer":"fire"
 		},
 		{
@@ -91,15 +87,18 @@ var qaJSON = {
 var currentStep;
 var hp;
 var currentLevel;
+var result;
+
 var currentQuestion;
-var initialize = true;
 var questionNumber;
 
+var initialize = true;
 if(initialize == true){
 	init();
 	displayQuestion(qaJSON,levelControl());
 	initialize = false;
 }
+
 
 //Initialize
 function init(){
@@ -144,17 +143,21 @@ function displayQuestion(qa,lv){
 }
 
 function displayResult(rw){
-	var result;
+	
+	var color;
 	switch (rw){
 		case 0:
 			result = "WRONG!"
+			color = "#ff6571"
 		break;
 		case 1:
 			result = "RIGHT!"
+			color = "#65ff89"
 		break;
 	}
 	var resultDisplay = document.getElementById("resultDisplay");
 	resultDisplay.innerHTML = result;
+	resultDisplay.style.color = color;
 }
 
 // @param {object} the question and answer from JSON
@@ -232,7 +235,7 @@ function levelControl(){
 		console.log("clear");
 		return "clear"
 	}else{
-		cno("Something went wrong!")
+		console.error("Something went wrong!")
 	}
 }
 
@@ -247,13 +250,11 @@ function gameClear(){
 	window.location.href = 'http://tatsuma.co/AAU/WNM499/WNM499_Final/clear'
 }
 
-function showHintDuration(){
-
-}
+// var displayHintTimer = setInterval(something,1000)
 
 function showHint(qa,lv){
 	// var thisQuestion = qa[lv][questionNumber];
-	var histDisplay = document.getElementById("histDisplay");
+	var hintDisplay = document.getElementById("histDisplay");
 	for(var i = 0; i < qa[lv][questionNumber].answer.length; i++){
 		setTimeout(
 			function(){

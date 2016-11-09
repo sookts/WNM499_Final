@@ -11,6 +11,7 @@ html,body{
 	width:100%;
 	height:$navbar-height;
 	background-color: rgba(0,0,0,0.1);
+	position: absolute;
 	ul{
 		float: right;
 		margin: calc((50px - 1em)/2) 0;
