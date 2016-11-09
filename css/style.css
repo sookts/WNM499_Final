@@ -44,4 +44,8 @@ h2{
   font-weight: 400;
   text-align: left;
 }
+.placeholder{
+  position: relative;
+  top:60px;
+}
 /*# sourceMappingURL=style.css.map */
