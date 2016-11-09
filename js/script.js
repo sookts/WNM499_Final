@@ -208,6 +208,17 @@ function deleteQuestion(qa,lv){
 function displayHitPoint(){
 	var hpDisplay = document.getElementById("hpDisplay");
 	hpDisplay.innerHTML = "LIFE " + hp;
+	if (hp == 2){
+		$(".hp3").toggleClass("hide")
+	}else if(hp == 1){
+		$(".hp2").toggleClass("hide")
+	}else if(hp == 0){
+		$(".hp1").toggleClass("hide")
+	}else if(hp == 3){
+		$(".hp1").removeClass("hide")
+		$(".hp2").removeClass("hide")
+		$(".hp3").removeClass("hide")
+	}
 }
 
 function gotDamage(){
