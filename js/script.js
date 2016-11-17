@@ -6,11 +6,13 @@ var qaJSON = {
 	"easy":[
 		{
 			"question": "A seven letter word containing thousands of letters",
-			"answer": "mailbox"
+			"answer": "mailbox",
+			"hint": "I am a hint"
 		},
 		{
 			"question":"What has a foot but no legs?",
-			"answer":"snail"
+			"answer":"snail",
+			"hint": "I am a hint"
 		},
 		{
 			"question":"I’m tall when I’m young and I’m short when I’m old. What am I?",
@@ -19,67 +21,82 @@ var qaJSON = {
 		},
 		{
 			"question":"What goes up when rain comes down?",
-			"answer":"umbrella"
+			"answer":"umbrella",
+			"hint": "I am a hint"
 		},
 		{
 			"question":"If I drink, I die. If I eat, I am fine. What am I?",
-			"answer":"fire"
+			"answer":"fire",
+			"hint": "I am a hint"
 		},
 		{
 			"question":"What has one eye but cannot see?",
-			"answer":"needle"
+			"answer":"needle",
+			"hint": "I am a hint"
 		},
 		{
 			"question":"If a blue house is made out of blue bricks, a yellow house is made out of yellow bricks and a pink house is made out of pink bricks, what is a green house made of?",
-			"answer":"glass"
+			"answer":"glass",
+			"hint": "I am a hint"
 		},
 		{
 			"question":"Teddy bears are never hungry because they are always what?",
-			"answer":"stuffed"
+			"answer":"stuffed",
+			"hint": "I am a hint"
 		}
 	],
 	"normal":[
 		{
 			"question":"What has 4 eyes but can’t see?",
-			"answer":"mississippi"
+			"answer":"mississippi",
+			"hint": "I am a hint"
 		},
 		{
 			"question":"Which vehicle is spelled the same forwards and backwards?",
-			"answer":"racecar"
+			"answer":"racecar",
+			"hint": "I am a hint"
 		},
 		{
 			"question":"What flies without wings?",
-			"answer":"time"
+			"answer":"time",
+			"hint": "I am a hint"
 		},
 		{
 			"question":"What five-letter word becomes shorter when you add two letters to it?",
-			"answer":"short"
+			"answer":"short",
+			"hint": "I am a hint"
 		},
 		{
 			"question":"What gets broken without being held?",
-			"answer":"promise"
+			"answer":"promise",
+			"hint": "I am a hint"
 		}
 	],
 	"hard":[
 		{
 			"question":"Poor people have it. Rich people need it. If you eat it you die. what is it?",
-			"answer":"nothing"
+			"answer":"nothing",
+			"hint": "I am a hint"
 		},
 		{
 			"question":"There was a green house. Inside the green house there was a white house Inside the white house there was a red house. Inside the red house there were lots of babies. What am I?",
-			"answer":"watermelon"
+			"answer":"watermelon",
+			"hint": "I am a hint"
 		},
 		{
 			"question":"A little pool with two layers of wall around it. One white and soft and the other dark and hard, amidst a light brown grassy lawn with an outline of a green grass. What am I?",
-			"answer":"coconut"
+			"answer":"coconut",
+			"hint": "I am a hint"
 		},
 		{
 			"question":"You will always find me in the past. I can be created in the present, But the future can never taint me. What am I?",
-			"answer":"history"
+			"answer":"history",
+			"hint": "I am a hint"
 		},
 		{
 			"question":"What is it that no man ever yet did see, which never was, but always is to be?",
-			"answer":"tomorrow"
+			"answer":"tomorrow",
+			"hint": "I am a hint"
 		}
 	]
 }
@@ -130,11 +147,13 @@ function clearInput(){
 
 function displayQuestion(qa,lv){
 	var questionDisplay = document.getElementById("questionDisplay");
+	var hintDisplay= document.getElementById("hintDisplay");
 	if(lv != "clear"){
 		questionNumber = Math.floor(Math.random() * qa[lv].length);
 		var randomQuestion = qa[lv][questionNumber];
 		// console.log("questionNumber",questionNumber)
 		questionDisplay.innerHTML = randomQuestion.question;
+		hintDisplay.innerHTML = randomQuestion.hint;
 		currentQuestion = randomQuestion;
 		deleteQuestion(qa,lv);
 	}else{
@@ -263,16 +282,16 @@ function gameClear(){
 
 // var displayHintTimer = setInterval(something,1000)
 
-function showHint(qa,lv){
-	// var thisQuestion = qa[lv][questionNumber];
-	var hintDisplay = document.getElementById("histDisplay");
-	for(var i = 0; i < qa[lv][questionNumber].answer.length; i++){
-		setTimeout(
-			function(){
-				console.log("working")
-				hintDisplay.value = qa[lv][questionNumber].answer.substr(0,i)
-			},3000)
-	}
-}
+// function showHint(qa,lv){
+// 	// var thisQuestion = qa[lv][questionNumber];
+// 	var hintDisplay = document.getElementById("hintDisplay");
+// 	for(var i = 0; i < qa[lv][questionNumber].answer.length; i++){
+// 		setTimeout(
+// 			function(){
+// 				console.log("working")
+// 				hintDisplay.value = qa[lv][questionNumber].answer.substr(0,i)
+// 			},3000)
+// 	}
+// }
 
 
