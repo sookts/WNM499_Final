@@ -113,6 +113,7 @@ var initialize = true;
 if(initialize == true){
 	init();
 	displayQuestion(qaJSON,levelControl());
+	showHint(qaJSON,levelControl());
 	initialize = false;
 }
 
@@ -147,13 +148,13 @@ function clearInput(){
 
 function displayQuestion(qa,lv){
 	var questionDisplay = document.getElementById("questionDisplay");
-	var hintDisplay= document.getElementById("hintDisplay");
+	
 	if(lv != "clear"){
 		questionNumber = Math.floor(Math.random() * qa[lv].length);
 		var randomQuestion = qa[lv][questionNumber];
 		// console.log("questionNumber",questionNumber)
 		questionDisplay.innerHTML = randomQuestion.question;
-		hintDisplay.innerHTML = randomQuestion.hint;
+		
 		currentQuestion = randomQuestion;
 		deleteQuestion(qa,lv);
 	}else{
@@ -280,18 +281,21 @@ function gameClear(){
 	window.location.href = 'http://tatsuma.co/AAU/WNM499/WNM499_Final/clear'
 }
 
-// var displayHintTimer = setInterval(something,1000)
+var displayHintTimer = setInterval(something,1000)
 
-// function showHint(qa,lv){
-// 	// var thisQuestion = qa[lv][questionNumber];
-// 	var hintDisplay = document.getElementById("hintDisplay");
-// 	for(var i = 0; i < qa[lv][questionNumber].answer.length; i++){
-// 		setTimeout(
-// 			function(){
-// 				console.log("working")
-// 				hintDisplay.value = qa[lv][questionNumber].answer.substr(0,i)
-// 			},3000)
-// 	}
-// }
+function showHint(qa,lv){
+	// var thisQuestion = qa[lv][questionNumber];
+	var hintDisplay = document.getElementById("hintDisplay");
+	for(var i = 0; i < qa[lv][questionNumber].answer.length; i++){
+		setTimeout(
+			function(){
+				console.log("working")
+				hintDisplay.innerHTML = qa[lv][questionNumber].answer.substr(0,i)
+				sleep(5000);
+				// hintDisplay.innerHTML = qa[lv][questionNumber].answer;
+			},3000)
+		// setTimeout(function(){ alert("Hello"); }, 3000);
+	}
+}
 
 
