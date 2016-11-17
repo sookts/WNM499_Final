@@ -267,13 +267,17 @@ function gameClear(){
 // var displayHintTimer = setInterval(something,1000)
 
 function showHint(qa,lv){
+	var something = addEventListener("click",function(){
+		console.log("HI")
+	})
+
 	var hintDisplay = document.getElementById("hintDisplay");
 	// for(var i = 0; i < qa[lv][questionNumber].answer.length; i++){
 		var i= 0;
 		var hint_timer = setInterval(
 			function(){
 				if(hintDisplay.innerHTML==qa[lv][questionNumber].answer) {
-				
+
 					return;
 				}
 				// console.log("working"+i)
