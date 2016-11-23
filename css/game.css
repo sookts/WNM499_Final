@@ -2,11 +2,13 @@ html, body {
   width: 100%;
   height: 100%;
   margin: 0;
-  overflow: hidden; }
+  overflow: hidden;
+}
 
 #canvas {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+}
 
 #questionWindow {
   width: 600px;
@@ -18,27 +20,30 @@ html, body {
   background-color: rgba(200, 255, 255, 0.4);
   border: #c8ffff solid 3px;
   border-radius: 5px;
-  text-align: center; }
-  #questionWindow input {
-    height: 60px;
-    width: 85%;
-    margin: 0 auto;
-    font-size: 40px;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 400;
-    color: white;
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.5);
-    -webkit-appearance: none;
-    outline: none;
-    text-align: center;
-    box-shadow: none;
-    border-width: 0px;
-    border: none;
-    margin-bottom: 50px; }
-    #questionWindow input:focus {
-      outline: none; }
+  text-align: center;
+}
+#questionWindow input {
+  height: 60px;
+  width: 85%;
+  margin: 0 auto;
+  font-size: 40px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  color: white;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-appearance: none;
+  outline: none;
+  text-align: center;
+  box-shadow: none;
+  border-width: 0px;
+  border: none;
+  margin-bottom: 50px;
+}
+#questionWindow input:focus {
+  outline: none;
+}
 
 #hintDisplay {
   font-family: sans-serif;
@@ -50,27 +55,30 @@ html, body {
   margin: 0 auto;
   left: 0;
   right: 0;
-  color: rgba(255, 255, 255, 0.5); }
-  #hintDisplay span {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+  color: rgba(255, 255, 255, 0.5);
+}
+#hintDisplay span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 .container {
   width: 100%;
   height: 100%;
-  position: relative; }
+  position: relative;
+}
 
 #hpDisplay {
   position: absolute;
   bottom: 10px;
   left: 10px;
-  color: #FFF; }
+  color: #FFF;
+}
 
 #resultDisplay {
   position: absolute;
   bottom: 50px;
-  left: 10px; }
-
-/*# sourceMappingURL=game.css.map */
+  left: 10px;
+}
