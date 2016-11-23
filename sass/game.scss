@@ -86,3 +86,34 @@ html,body{
 	bottom: 50px;
 	left: 10px;
 }
+h2{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 20px;
+  text-align: center;
+  color: black;
+  font-weight: 900;
+  /*margin-top: 100px;*/
+  
+}
+.hp{
+  margin:10px auto;
+  width: 100%;
+  text-align: center;
+}
+.hide{
+  display: none;
+}
+#questionDisplay{
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-left: 40px;
+  margin-right: 40px;
+  font-size: 35px;
+  color: white;
+  font-weight: 400;
+  text-align: left;
+}
+.placeholder{
+  position: relative;
+  top:60px;
+}
+
