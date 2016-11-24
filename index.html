@@ -5,14 +5,16 @@
 	<title>Story</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
-
+	<link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" rel="stylesheet">
 	<script src="js/jquery-1.12.4.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 </head>
 <body>
 	<div class="firstscreen">
 		<nav id="navigationBar">
-			<h1>Bunnytime</h1>
+			<a href="#">
+				<h1>Bunnytime</h1>
+			</a>
 			<ul>
 				<a href="#">
 					<li>story</li>
@@ -38,13 +40,24 @@
 				Help Bunny save his grandpa!</p>
 			</div>
 			<a href="#" id="scroll">
-				<img src="assets/images/arrow.svg" alt="arrow" width="60px" style="margin-top: 40px">
+				<svg id="arrow" data-name="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.68 19.2"><defs><style>.cls-1{fill:none;stroke:#f4c1d0;stroke-miterlimit:10;stroke-width:3px;}</style></defs><title>arror</title><polyline class="cls-1" points="32.64 1.56 16.47 17.08 1.08 1.04"/></svg>
+				<!-- 
+				<img src="assets/images/arrow.svg" alt="arrow" width="60px" style="margin-top: 40px;stroke:#FFFFFF"> -->
 			</a>
 		</div>
 	</div>
 	<div class="secondscreen">
 		<img class="scroll_top" src="assets/images/scroll_top.svg">
+		<div class="scroll_body">
+			<p>I have your precious grandpa. If you want to see him again, you must defeat my riddle minions. <br>
+			Come and find me at the end of the forest</p>
+		</div>
 		<img class="scroll_bottom" src="assets/images/scroll_bottom.svg">
+		<a href="game/index.html">
+			<div class="start">
+				<p>START GAME</p>
+			</div>
+		</a>
 	</div>
 	<footer>
 		<p>@ 2016</p>
@@ -58,16 +71,25 @@ $(function() {
             return false;
     });
 });
-
-
-
-
-
-
-
-
-
 </script>
+<script>
+	$(window).scroll(function(){
+			 var fromtop = $(document).scrollTop();       // pixels from top of screen
+			 console.log ( fromtop);
+		       if ( fromtop >= 700 ) {
+		       		 $(".scroll_body").addClass("animation");
+		       		 setTimeout(function(){ $( ".start" ).show( "fade", 500); }, 1000);
+		       }
+});
+</script>
+
+
+
+
+
+
+
+
 </body>
 
 </html>
