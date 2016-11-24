@@ -5,36 +5,69 @@
 	<title>Story</title>
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
+
+	<script src="js/jquery-1.12.4.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
 </head>
 <body>
-<div class="firstscreen">
-	<nav id="navigationBar">
-		<h1>Bunnytime</h1>
-		<ul>
-			<a href="#">
-				<li>story</li>
+	<div class="firstscreen">
+		<nav id="navigationBar">
+			<h1>Bunnytime</h1>
+			<ul>
+				<a href="#">
+					<li>story</li>
+				</a>
+				<a href="game/index.html">
+					<li>game</li>
+				</a>
+				<a href="about/index.html">
+					<li>about</li>
+				</a>
+				<a href="process/index.html">
+					<li>process</li>
+				</a>
+			</ul>
+		</nav>
+		<img class="bunny" src="assets/images/bunny.svg" alt="bunny">
+		<div class="container">
+			<h2>There you are!</h2>
+			<div class="textbox">
+			<p>We’ve been waiting for a riddlemaster!<br>
+				Bunny’s grandpa has been<br>
+				kidnapped by the riddle monsters...<br>
+				Help Bunny save his grandpa!</p>
+			</div>
+			<a href="#" id="scroll">
+				<img src="assets/images/arrow.svg" alt="arrow" width="60px" style="margin-top: 40px">
 			</a>
-			<a href="game/index.html">
-				<li>game</li>
-			</a>
-			<a href="about/index.html">
-				<li>about</li>
-			</a>
-			<a href="process/index.html">
-				<li>process</li>
-			</a>
-		</ul>
-	</nav>
-	<img class="bunny" src="assets/images/bunny.svg" alt="bunny">
-	<div class="container">
-		<h2>There you are!</h2>
-		<p>We’ve been waiting for a riddlemaster!<br>
-			Bunny’s grandpa has been<br>
-			kidnapped by the riddle monsters...<br>
-			Help Bunny save his grandpa!</p>
+		</div>
 	</div>
-	<!-- <script type="text/javascript" src="js/nav.js"></script>-->
-</div>
-<a href="game/index.html" style="  position: relative; top:60px;">Game Page</a>
+	<div class="secondscreen">
+		<img class="scroll_top" src="assets/images/scroll_top.svg">
+		<img class="scroll_bottom" src="assets/images/scroll_bottom.svg">
+	</div>
+	<footer>
+		<p>@ 2016</p>
+	</footer>
+<!-- <a href="game/index.html" style="  position: relative; top:60px;">Game Page</a> -->
+<script>
+$(function() {
+	$('#scroll').click(function() {
+        var pos = $('.secondscreen').offset().top;
+       $('html, body').animate({'scrollTop' : pos},1000,'easeInOutQuart');
+            return false;
+    });
+});
+
+
+
+
+
+
+
+
+
+</script>
 </body>
+
 </html>
