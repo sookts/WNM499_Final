@@ -75,24 +75,17 @@ var qaJSON = {
 		},
 		{
 			"question":"You will always find me in the past. I can be created in the present, But the future can never taint me. What am I?",
-			"answer":"history"
+			"answer":"history",
+			"alternateAnswer":"memories"
 		},
 		{
 			"question":"What is it that no man ever yet did see, which never was, but always is to be?",
-			"answer":"tomorrow"
+			"answer":"tomorrow",
+			"alternateAnswer":"future"
 		}
 	]
 }
 
-var currentStep;
-var hp;
-var currentLevel;
-var result;
-
-var currentQuestion;
-var questionNumber;
-
-var initialize = true;
 if(initialize == true){
 	init();
 	displayQuestion(qaJSON,levelControl());
@@ -183,10 +176,11 @@ function evaluateUserInput(qa){
 	})();
 
 	if(a == currentQuestion.answer || a == currentQuestion.alternateAnswer){
-		currentStep++;
+		console.log("currentStep",currentStep)
+		animate(currentStep);
 		displayLevel();
 		displayQuestion(qa,levelControl());
-		console.log(currentStep);
+		// console.log(currentStep);
 		displayResult(1)
 	}else if(a == ""){
 		alert("Enter an answer!")
