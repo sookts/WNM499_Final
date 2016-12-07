@@ -10,6 +10,11 @@ html, body {
   width: 100%;
   background-color: #00b084;
 }
+@media (min-width: 0px) and (max-width: 450px) {
+  .firstscreen {
+    min-height: initial;
+  }
+}
 .firstscreen h2 {
   font-family: 'Nova Mono', monospace;
   font-size: 55px;
@@ -26,9 +31,38 @@ html, body {
     font-size: 50px;
   }
 }
-@media (min-width: 0px) and (max-width: 799px) {
+@media (min-width: 650px) and (max-width: 799px) {
   .firstscreen h2 {
     font-size: 30px;
+  }
+}
+@media (min-width: 0px) and (max-width: 649px) {
+  .firstscreen h2 {
+    font-size: 30px;
+    position: static;
+    float: left;
+    margin-left: 10%;
+  }
+}
+.firstscreen .textbox {
+  text-align: left;
+  width: 650px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  overflow: auto;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+@media (min-width: 650px) and (max-width: 799px) {
+  .firstscreen .textbox {
+    width: 500px;
+  }
+}
+@media (min-width: 0px) and (max-width: 649px) {
+  .firstscreen .textbox {
+    width: 80%;
+    margin-left: 10%;
   }
 }
 .firstscreen p {
@@ -55,6 +89,21 @@ html, body {
   width: 100%;
   background-color: #f9d9e5;
 }
+@media (min-width: 660px) and (max-width: 1050px) {
+  .secondscreen {
+    min-height: 930px;
+  }
+}
+@media (min-width: 450px) and (max-width: 659px) {
+  .secondscreen {
+    min-height: 750px;
+  }
+}
+@media (min-width: 0px) and (max-width: 449px) {
+  .secondscreen {
+    min-height: 850px;
+  }
+}
 
 #navigationBar {
   height: 100px;
@@ -77,9 +126,15 @@ html, body {
     font-size: 50px;
   }
 }
-@media (min-width: 0px) and (max-width: 799px) {
+@media (min-width: 600px) and (max-width: 799px) {
   #navigationBar h1 {
     font-size: 30px;
+  }
+}
+@media (min-width: 0) and (max-width: 599px) {
+  #navigationBar h1 {
+    font-size: 30px;
+    margin: 30px 0 0 30px;
   }
 }
 #navigationBar ul {
@@ -111,13 +166,22 @@ html, body {
 #navigationBar .navButton {
   width: 60px;
   float: right;
-  margin: 50px 80px 0 0;
+  margin: 43px 80px 0 0;
   display: none;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
 }
-@media (min-width: 0px) and (max-width: 1050px) {
+@media (min-width: 600px) and (max-width: 1050px) {
   #navigationBar .navButton {
     width: 40px;
     display: block;
+  }
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  #navigationBar .navButton {
+    width: 40px;
+    display: block;
+    margin: 43px 30px 0 0;
   }
 }
 
@@ -132,7 +196,7 @@ html, body {
 .navBody .navClose {
   width: 30px;
   float: right;
-  margin: 50px 65px 0 0;
+  margin: 37px 35px 0 0;
 }
 .navBody ul {
   list-style-type: none;
@@ -166,24 +230,20 @@ html, body {
   width: 100px;
   margin: 150px auto 0 auto;
   display: block;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+@media (min-width: 0px) and (max-width: 500px) {
+  .bunny {
+    margin: 10px auto 0 auto;
+    width: 70px;
+  }
 }
 
 .container {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
-}
-
-.textbox {
-  text-align: left;
-  width: 650px;
-  margin-left: auto;
-  margin-right: auto;
-}
-@media (min-width: 0px) and (max-width: 799px) {
-  .textbox {
-    width: 100%;
-  }
 }
 
 #arrow {
@@ -210,7 +270,7 @@ html, body {
 }
 @media (min-width: 0px) and (max-width: 1050px) {
   .scroll_top {
-    width: 70%;
+    width: 80%;
   }
 }
 
@@ -223,7 +283,7 @@ html, body {
 }
 @media (min-width: 0px) and (max-width: 1050px) {
   .scroll_bottom {
-    width: 70%;
+    width: 80%;
   }
 }
 
@@ -237,10 +297,20 @@ html, body {
   background-size: cover;
   transition: all 1.3s ease;
   -webkit-transition: all 1.3s ease;
+  -moz-transition: all 1.3s ease;
+  -o-transition: all 1.3s ease;
 }
-@media (min-width: 0px) and (max-width: 1050px) {
+@media (min-width: 450px) and (max-width: 1050px) {
   .scroll_body {
-    width: 60%;
+    width: 70%;
+    /*background-size:100% 100%;*/
+    background-size: cover;
+  }
+}
+@media (min-width: 0) and (max-width: 449px) {
+  .scroll_body {
+    width: 70%;
+    height: auto;
     /*background-size:100% 100%;*/
     background-size: cover;
   }
@@ -270,6 +340,8 @@ html, body {
 
 .animation {
   height: 680px;
+  transition: all 1.3s ease;
+  -webkit-transition: all 1.3s ease;
 }
 @media (min-width: 0px) and (max-width: 1050px) {
   .animation {
