@@ -18,11 +18,35 @@ html, body {
   margin-bottom: 0;
   position: relative;
   left: -180px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+@media (min-width: 800px) and (max-width: 1050px) {
+  .firstscreen h2 {
+    font-size: 50px;
+  }
+}
+@media (min-width: 0px) and (max-width: 799px) {
+  .firstscreen h2 {
+    font-size: 30px;
+  }
 }
 .firstscreen p {
   font-family: 'Nova Mono', monospace;
   font-size: 30px;
   color: white;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+@media (min-width: 800px) and (max-width: 1050px) {
+  .firstscreen p {
+    font-size: 27px;
+  }
+}
+@media (min-width: 0px) and (max-width: 799px) {
+  .firstscreen p {
+    font-size: 20px;
+  }
 }
 
 .secondscreen {
@@ -48,11 +72,26 @@ html, body {
 #navigationBar h1:hover {
   color: white;
 }
+@media (min-width: 800px) and (max-width: 1050px) {
+  #navigationBar h1 {
+    font-size: 50px;
+  }
+}
+@media (min-width: 0px) and (max-width: 799px) {
+  #navigationBar h1 {
+    font-size: 30px;
+  }
+}
 #navigationBar ul {
   list-style-type: none;
   float: right;
   display: inline-block;
   margin-right: 80px;
+}
+@media (min-width: 0px) and (max-width: 1050px) {
+  #navigationBar ul {
+    display: none;
+  }
 }
 #navigationBar ul a {
   text-decoration: none;
@@ -67,6 +106,55 @@ html, body {
   -webkit-transition: all 0.3s ease;
 }
 #navigationBar ul a li:hover {
+  color: white;
+}
+#navigationBar .navButton {
+  width: 60px;
+  float: right;
+  margin: 50px 80px 0 0;
+  display: none;
+}
+@media (min-width: 0px) and (max-width: 1050px) {
+  #navigationBar .navButton {
+    width: 40px;
+    display: block;
+  }
+}
+
+.navBody {
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  background-color: #fca55e;
+  position: fixed;
+  display: none;
+}
+.navBody .navClose {
+  width: 30px;
+  float: right;
+  margin: 50px 65px 0 0;
+}
+.navBody ul {
+  list-style-type: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.navBody ul a {
+  text-decoration: none;
+}
+.navBody ul a li {
+  display: block;
+  margin: 30px 30px 0 0;
+  color: #FFFFFF;
+  font-family: 'Nova Mono', monospace;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+.navBody ul a li:hover {
   color: white;
 }
 
@@ -92,6 +180,11 @@ html, body {
   margin-left: auto;
   margin-right: auto;
 }
+@media (min-width: 0px) and (max-width: 799px) {
+  .textbox {
+    width: 100%;
+  }
+}
 
 #arrow {
   width: 60px;
@@ -112,12 +205,26 @@ html, body {
   display: block;
   padding-top: 100px;
   margin: 0 auto 0 auto;
+  transition: all 1.3s ease;
+  -webkit-transition: all 1.3s ease;
+}
+@media (min-width: 0px) and (max-width: 1050px) {
+  .scroll_top {
+    width: 70%;
+  }
 }
 
 .scroll_bottom {
   width: 800px;
   display: block;
   margin: -40px auto 0 auto;
+  transition: all 1.3s ease;
+  -webkit-transition: all 1.3s ease;
+}
+@media (min-width: 0px) and (max-width: 1050px) {
+  .scroll_bottom {
+    width: 70%;
+  }
 }
 
 .scroll_body {
@@ -126,19 +233,49 @@ html, body {
   height: 0px;
   overflow: hidden;
   margin: -50px auto 0 auto;
-  background: url("../assets/images/scroll_body.svg") center center;
+  background: url("../assets/images/scroll_body.svg") center center no-repeat;
   background-size: cover;
   transition: all 1.3s ease;
   -webkit-transition: all 1.3s ease;
 }
+@media (min-width: 0px) and (max-width: 1050px) {
+  .scroll_body {
+    width: 60%;
+    /*background-size:100% 100%;*/
+    background-size: cover;
+  }
+}
 .scroll_body p {
   font-family: 'Covered By Your Grace', cursive;
   font-size: 50px;
-  margin: 100px 180px 0 180px;
+  margin: 100px 20% 100px 20%;
+}
+@media (min-width: 800px) and (max-width: 1050px) {
+  .scroll_body p {
+    font-size: 30px;
+  }
+}
+@media (min-width: 660px) and (max-width: 799px) {
+  .scroll_body p {
+    font-size: 30px;
+    margin: 100px 20%;
+  }
+}
+@media (min-width: 300px) and (max-width: 659px) {
+  .scroll_body p {
+    font-size: 24px;
+    margin: 100px 30px;
+  }
 }
 
 .animation {
   height: 680px;
+}
+@media (min-width: 0px) and (max-width: 1050px) {
+  .animation {
+    /*height: calc(auto+50px);*/
+    height: auto;
+  }
 }
 
 a {

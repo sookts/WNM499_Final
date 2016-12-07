@@ -23,11 +23,28 @@ html,body{
 		margin-bottom: 0;
 		position: relative;
 		left: -180px;
+		transition: all 0.3s ease;
+      	-webkit-transition: all 0.3s ease;
+		@include breakpoint(800px 1050px){
+			font-size:50px;
+		}
+		@include breakpoint(0px 799px){
+			font-size:30px;
+		}		
 	}
+
 	p{
 		font-family: 'Nova Mono', monospace;
 		font-size: 30px;
 		color: white;
+		transition: all 0.3s ease;
+      	-webkit-transition: all 0.3s ease;
+		@include breakpoint(800px 1050px){
+			font-size:27px;
+		}
+		@include breakpoint(0px 799px){
+			font-size:20px;
+		}		
 	}
 }
 .secondscreen{
@@ -47,15 +64,25 @@ html,body{
 			font-weight: 400;
 			transition: all 0.3s ease;
 			-webkit-transition: all 0.3s ease;
+
 			&:hover{
 				color:white;
 			}
+			@include breakpoint(800px 1050px){
+				font-size:50px;
+			}	
+			@include breakpoint(0px 799px){
+				font-size:30px;
+			}		
 		}
 		ul{
 			list-style-type: none;
 			float: right;
 			display: inline-block;
 			margin-right: 80px;
+			@include breakpoint(0px 1050px){
+				display: none;
+			}	
 			a{
 				text-decoration: none;
 					li{
@@ -72,6 +99,53 @@ html,body{
 					}
 			}
 
+		}
+		.navButton{
+			width: 60px;
+			float: right;
+			margin: 50px 80px 0 0;
+			display: none;
+			@include breakpoint(0px 1050px){
+				width: 40px;
+				display: block;
+			}	
+		}
+
+}
+.navBody{
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	background-color:rgb(252,165,94);
+	position:fixed;
+	display:none;
+		.navClose{
+			width: 30px;
+			float: right;
+			margin:50px 65px 0 0;
+		}
+		ul{
+			list-style-type: none;
+			position:absolute;
+			top:50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			a{
+				text-decoration: none;
+					li{
+						display: block;
+						margin: 30px 30px 0 0;
+						color: #FFFFFF;
+						font-family: 'Nova Mono', monospace;
+						font-size: 20px;
+						transition: all 0.3s ease;
+						-webkit-transition: all 0.3s ease;
+						&:hover{
+							color:white;
+						}
+					}
+			}
 		}
 }
 .st0{
@@ -92,6 +166,9 @@ html,body{
 	width:650px;
 	margin-left: auto;
 	margin-right: auto;
+	@include breakpoint(0px 799px){
+		width: 100%
+	}
 }
 #arrow{
 	width: 60px;
@@ -112,12 +189,21 @@ html,body{
 	display: block;
 	padding-top: 100px;
 	margin:0 auto 0 auto;
+	transition: all 1.3s ease;
+	-webkit-transition: all 1.3s ease;
+		@include breakpoint(0px 1050px){
+			width: 70%;
+		}	
 }
 .scroll_bottom{
 	width: 800px;
 	display: block;
 	margin:-40px auto 0 auto;
-
+	transition: all 1.3s ease;
+	-webkit-transition: all 1.3s ease;
+		@include breakpoint(0px 1050px){
+			width: 70%;
+		}
 }
 .scroll_body{
 	/*display: none;*/
@@ -125,19 +211,39 @@ html,body{
 	height: 0px;
 	overflow: hidden;
 	margin:-50px auto 0 auto;
-	background: url("../assets/images/scroll_body.svg") center center;
+	background: url("../assets/images/scroll_body.svg") center center no-repeat;
 	background-size: cover;
 	transition: all 1.3s ease;
 	-webkit-transition: all 1.3s ease;
+		@include breakpoint(0px 1050px){
+			width: 60%;
+			/*background-size:100% 100%;*/
+			background-size: cover;
+			
+		}
 		p{
 			font-family: 'Covered By Your Grace', cursive;
 			font-size: 50px;
-			margin:100px 180px 0 180px;
+			margin:100px 20% 100px 20%;
+				@include breakpoint(800px 1050px){
+					font-size: 30px;
+				}
+				@include breakpoint(660px 799px){
+					font-size: 30px;
+					margin:100px 20%;
+				}
+				@include breakpoint(300px 659px){
+					font-size: 24px;
+					margin:100px 30px;
+				}				
 		}
 }
 .animation{
 	height: 680px;
-
+		@include breakpoint(0px 1050px){
+			/*height: calc(auto+50px);*/
+			height: auto;
+		}
 }
 a{
 	text-decoration: none;

@@ -3,13 +3,32 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Story</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" rel="stylesheet">
+
 	<script src="js/jquery-1.12.4.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 </head>
 <body>
+	<div class="navBody">
+		<a class="navClose" href="#"><img src="assets/images/close.svg" alt="close"></a>
+		<ul>
+			<a href="#">
+				<li>story</li>
+			</a>
+			<a href="game/index.html">
+				<li>game</li>
+			</a>
+			<a href="about/index.html">
+				<li>about</li>
+			</a>
+			<a href="process/index.html">
+				<li>process</li>
+			</a>
+		</ul>
+	</div>
 	<div class="firstscreen">
 		<nav id="navigationBar">
 			<a href="#">
@@ -29,6 +48,8 @@
 					<li>process</li>
 				</a>
 			</ul>
+			<a class="navButton" href="#"><img src="assets/images/navButton.svg" alt="menu"></a>
+
 		</nav>
 		<img class="bunny" src="assets/images/bunny.svg" alt="bunny">
 		<div class="container">
@@ -49,7 +70,7 @@
 	<div class="secondscreen">
 		<img class="scroll_top" src="assets/images/scroll_top.svg">
 		<div class="scroll_body">
-			<p>I have your precious grandpa. If you want to see him again, you must defeat my riddle minions. <br>
+			<p>I have your precious grandpa. If you want to see him again, you must defeat my riddle minions. <br><br>
 			Come and find me at the end of the forest</p>
 		</div>
 		<img class="scroll_bottom" src="assets/images/scroll_bottom.svg">
@@ -81,8 +102,16 @@ $(function() {
 		       		 setTimeout(function(){ $( ".start" ).show( "fade", 500); }, 1000);
 		       }
 });
-</script>
 
+</script>
+<script>
+	$( '.navButton' ).click(function() {
+	  $( ".navBody" ).show( "fade" );
+	});
+	$( '.navClose' ).click(function() {
+	  $( ".navBody" ).hide( "fade" );
+	});
+</script>
 
 
 
