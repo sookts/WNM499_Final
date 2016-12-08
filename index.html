@@ -7,7 +7,8 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" rel="stylesheet">
-
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	
 	<script src="js/jquery-1.12.4.js"></script>
 	<script src="js/jquery-ui.min.js"></script>
 </head>
@@ -98,7 +99,7 @@ $(function() {
 	$(window).scroll(function(){
 			 var fromtop = $(document).scrollTop();       // pixels from top of screen
 			 console.log ( fromtop);
-		       if ( fromtop >= 700 ) {
+		       if ( fromtop >= 650 ) {
 		       		 $(".scroll_body").addClass("animation");
 		       		 setTimeout(function(){ $( ".start" ).show( "fade", 500); }, 1000);
 		       }

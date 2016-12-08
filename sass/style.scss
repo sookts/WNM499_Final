@@ -25,7 +25,7 @@ html,body{
 		font-weight: 400;
 		margin-bottom: 0;
 		position: relative;
-		left: -180px;
+		left: -120px;
 		transition: all 0.3s ease;
       	-webkit-transition: all 0.3s ease;
 		@include breakpoint(800px 1050px){
@@ -43,15 +43,18 @@ html,body{
 	}
 	.textbox{
 		text-align: left;
-		width:650px;
+		width:600px;
 		margin-left: auto;
 		margin-right: auto;
 		display: block;
 		overflow: auto;
 		transition: all 0.3s ease;
       	-webkit-transition: all 0.3s ease;
+      	@include breakpoint(800px 1049px){
+      		width: 500px;
+      	}
 		@include breakpoint(650px 799px){
-			width: 500px;
+			width: 420px;
 		}
 		@include breakpoint(0px 649px){
 			width: 80%;
@@ -60,16 +63,21 @@ html,body{
 		}
 	}
 	p{
-		font-family: 'Nova Mono', monospace;
-		font-size: 30px;
+		font-family: 'Open Sans', sans-serif;
+		// font-family: 'Nova Mono', monospace;
+		font-size: 32px;
 		color: white;
 		transition: all 0.3s ease;
       	-webkit-transition: all 0.3s ease;
 		@include breakpoint(800px 1050px){
 			font-size:27px;
 		}
-		@include breakpoint(0px 799px){
-			font-size:20px;
+		@include breakpoint(500px 799px){
+			font-size:22px;
+		}
+		@include breakpoint(0 499px){
+			font-size: 20px;
+			// text-align: justify;
 		}		
 	}
 }
