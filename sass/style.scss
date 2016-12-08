@@ -78,14 +78,17 @@ html,body{
 	min-height: 1200px;
 	width: 100%;
 	background-color:rgb(249,217,229);
-	@include breakpoint(660px 1050px){
+	@include breakpoint(800px 1050px){
+		min-height: 1120px;
+	}
+	@include breakpoint(660px 799px){
 		min-height: 930px;
 	}
 	@include breakpoint(450px 659px){
-		min-height: 750px;
+		min-height: 900px;
 	}
 	@include breakpoint(0px 449px){
-		min-height: 850px;
+		min-height: 900px;
 	}
 }
 #navigationBar{
@@ -251,8 +254,13 @@ html,body{
 	margin:0 auto 0 auto;
 	transition: all 1.3s ease;
 	-webkit-transition: all 1.3s ease;
-		@include breakpoint(0px 1050px){
+		@include breakpoint(550px 1050px){
 			width: 80%;
+		}
+		@include breakpoint(0 549px){
+			width: 100%;
+			position: relative;
+			top:-20px;
 		}	
 }
 .scroll_bottom{
@@ -261,8 +269,16 @@ html,body{
 	margin:-40px auto 0 auto;
 	transition: all 1.3s ease;
 	-webkit-transition: all 1.3s ease;
-		@include breakpoint(0px 1050px){
+		@include breakpoint(800px 1050px){
 			width: 80%;
+		}
+		@include breakpoint(550px 799px){
+			width: 80%;
+			margin:-10px auto 0 auto;
+		}
+		@include breakpoint(0 549px){
+			width: 100%;
+			margin:-10px auto 0 auto;
 		}
 }
 .scroll_body{
@@ -271,39 +287,47 @@ html,body{
 	height: 0px;
 	overflow: hidden;
 	margin:-50px auto 0 auto;
-	background: url("../assets/images/scroll_body.svg") center center no-repeat;
-	background-size: cover;
+	background-color:#D3D1B2;
+	background-image: 
+	url("../assets/images/scroll_left.svg"),
+	url("../assets/images/scroll_right.svg");
+	background-size:100px;
+	background-repeat:repeat-y, repeat-y;
+	background-position:
+	center left,
+	center right;
+	// background-size: cover;
 
 	transition: all 1.3s ease;
 	-webkit-transition: all 1.3s ease;
 	-moz-transition: all 1.3s ease;
 	-o-transition: all 1.3s ease;
 	
-		@include breakpoint(450px 1050px){
-			width: 70%;
+		@include breakpoint(550px 1050px){
+			width: 80%;
 			/*background-size:100% 100%;*/
-			background-size: cover;
+			// background-size: cover;
 		}
-		@include breakpoint(0 449px){
-			width: 70%;
-			height: auto;
+		@include breakpoint(0 549px){
+			width: 100%;
+			
 			/*background-size:100% 100%;*/
-			background-size: cover;
+			// background-size: cover;
 		}
 		p{
 			font-family: 'Covered By Your Grace', cursive;
 			font-size: 50px;
 			margin:100px 20% 100px 20%;
 				@include breakpoint(800px 1050px){
-					font-size: 30px;
+					font-size: 40px;
 				}
 				@include breakpoint(660px 799px){
+					font-size: 35px;
+					// margin:100px 20%;
+				}
+				@include breakpoint(0px 659px){
 					font-size: 30px;
 					margin:100px 20%;
-				}
-				@include breakpoint(300px 659px){
-					font-size: 24px;
-					margin:100px 30px;
 				}				
 		}
 }
@@ -312,9 +336,20 @@ html,body{
 	transition: all 1.3s ease;
 	-webkit-transition: all 1.3s ease;
 
-		@include breakpoint(0px 1050px){
-			/*height: calc(auto+50px);*/
-			height: auto;
+		@include breakpoint(800px 1050px){
+			height: 600px;
+		}
+		@include breakpoint(660px 799px){
+			height: 500px;
+		}
+		@include breakpoint(410px 659px){
+			height: 480px;
+		}
+		@include breakpoint(330px 410px){
+			height: 520px;
+		}
+		@include breakpoint(0px 330px){
+			height: 560px;
 		}
 }
 a{

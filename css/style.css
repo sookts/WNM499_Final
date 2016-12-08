@@ -89,19 +89,24 @@ html, body {
   width: 100%;
   background-color: #f9d9e5;
 }
-@media (min-width: 660px) and (max-width: 1050px) {
+@media (min-width: 800px) and (max-width: 1050px) {
+  .secondscreen {
+    min-height: 1120px;
+  }
+}
+@media (min-width: 660px) and (max-width: 799px) {
   .secondscreen {
     min-height: 930px;
   }
 }
 @media (min-width: 450px) and (max-width: 659px) {
   .secondscreen {
-    min-height: 750px;
+    min-height: 900px;
   }
 }
 @media (min-width: 0px) and (max-width: 449px) {
   .secondscreen {
-    min-height: 850px;
+    min-height: 900px;
   }
 }
 
@@ -293,9 +298,16 @@ html, body {
   transition: all 1.3s ease;
   -webkit-transition: all 1.3s ease;
 }
-@media (min-width: 0px) and (max-width: 1050px) {
+@media (min-width: 550px) and (max-width: 1050px) {
   .scroll_top {
     width: 80%;
+  }
+}
+@media (min-width: 0) and (max-width: 549px) {
+  .scroll_top {
+    width: 100%;
+    position: relative;
+    top: -20px;
   }
 }
 
@@ -306,9 +318,21 @@ html, body {
   transition: all 1.3s ease;
   -webkit-transition: all 1.3s ease;
 }
-@media (min-width: 0px) and (max-width: 1050px) {
+@media (min-width: 800px) and (max-width: 1050px) {
   .scroll_bottom {
     width: 80%;
+  }
+}
+@media (min-width: 550px) and (max-width: 799px) {
+  .scroll_bottom {
+    width: 80%;
+    margin: -10px auto 0 auto;
+  }
+}
+@media (min-width: 0) and (max-width: 549px) {
+  .scroll_bottom {
+    width: 100%;
+    margin: -10px auto 0 auto;
   }
 }
 
@@ -318,26 +342,26 @@ html, body {
   height: 0px;
   overflow: hidden;
   margin: -50px auto 0 auto;
-  background: url("../assets/images/scroll_body.svg") center center no-repeat;
-  background-size: cover;
+  background-color: #D3D1B2;
+  background-image: url("../assets/images/scroll_left.svg"), url("../assets/images/scroll_right.svg");
+  background-size: 100px;
+  background-repeat: repeat-y, repeat-y;
+  background-position: center left, center right;
   transition: all 1.3s ease;
   -webkit-transition: all 1.3s ease;
   -moz-transition: all 1.3s ease;
   -o-transition: all 1.3s ease;
 }
-@media (min-width: 450px) and (max-width: 1050px) {
+@media (min-width: 550px) and (max-width: 1050px) {
   .scroll_body {
-    width: 70%;
+    width: 80%;
     /*background-size:100% 100%;*/
-    background-size: cover;
   }
 }
-@media (min-width: 0) and (max-width: 449px) {
+@media (min-width: 0) and (max-width: 549px) {
   .scroll_body {
-    width: 70%;
-    height: auto;
+    width: 100%;
     /*background-size:100% 100%;*/
-    background-size: cover;
   }
 }
 .scroll_body p {
@@ -347,19 +371,18 @@ html, body {
 }
 @media (min-width: 800px) and (max-width: 1050px) {
   .scroll_body p {
-    font-size: 30px;
+    font-size: 40px;
   }
 }
 @media (min-width: 660px) and (max-width: 799px) {
   .scroll_body p {
-    font-size: 30px;
-    margin: 100px 20%;
+    font-size: 35px;
   }
 }
-@media (min-width: 300px) and (max-width: 659px) {
+@media (min-width: 0px) and (max-width: 659px) {
   .scroll_body p {
-    font-size: 24px;
-    margin: 100px 30px;
+    font-size: 30px;
+    margin: 100px 20%;
   }
 }
 
@@ -368,10 +391,29 @@ html, body {
   transition: all 1.3s ease;
   -webkit-transition: all 1.3s ease;
 }
-@media (min-width: 0px) and (max-width: 1050px) {
+@media (min-width: 800px) and (max-width: 1050px) {
   .animation {
-    /*height: calc(auto+50px);*/
-    height: auto;
+    height: 600px;
+  }
+}
+@media (min-width: 660px) and (max-width: 799px) {
+  .animation {
+    height: 500px;
+  }
+}
+@media (min-width: 410px) and (max-width: 659px) {
+  .animation {
+    height: 480px;
+  }
+}
+@media (min-width: 330px) and (max-width: 410px) {
+  .animation {
+    height: 520px;
+  }
+}
+@media (min-width: 0px) and (max-width: 330px) {
+  .animation {
+    height: 560px;
   }
 }
 
