@@ -425,6 +425,11 @@ footer p {
   margin-left: auto;
   margin-right: auto;
 }
+@media (min-width: 0) and (max-width: 830px) {
+  .monsters {
+    display: none;
+  }
+}
 .monsters .monster1 {
   height: 200px;
   margin-right: 50px;
@@ -446,10 +451,22 @@ footer p {
   width: 100%;
   background-color: #00b084;
 }
+@media (min-width: 0) and (max-width: 1000px) {
+  .aboutscreen {
+    height: auto;
+  }
+}
 .aboutscreen .aboutbox {
   width: 80%;
   max-width: 800px;
-  margin: 100px auto 100px auto;
+  margin: 0px auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+@media (min-width: 0) and (max-width: 830px) {
+  .aboutscreen .aboutbox {
+    padding-top: 0;
+  }
 }
 .aboutscreen h2 {
   font-family: 'Nova Mono', monospace;
@@ -460,20 +477,16 @@ footer p {
   margin-top: 50px;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
+  /*		@include breakpoint(650px 799px){
+  			font-size:35px;
+  		}	
+  		@include breakpoint(0px 649px){
+  			font-size:25px;
+  		}	*/
 }
-@media (min-width: 800px) and (max-width: 1050px) {
+@media (min-width: 0px) and (max-width: 1000px) {
   .aboutscreen h2 {
-    font-size: 35px;
-  }
-}
-@media (min-width: 650px) and (max-width: 799px) {
-  .aboutscreen h2 {
-    font-size: 35px;
-  }
-}
-@media (min-width: 0px) and (max-width: 649px) {
-  .aboutscreen h2 {
-    font-size: 25px;
+    text-align: center;
   }
 }
 .aboutscreen h3 {
@@ -486,32 +499,100 @@ footer p {
   font-size: 20px;
   color: white;
 }
+@media (min-width: 0px) and (max-width: 1000px) {
+  .aboutscreen p {
+    text-align: justify;
+  }
+}
+@media (min-width: 0px) and (max-width: 830px) {
+  .aboutscreen .creator {
+    display: none;
+  }
+}
 .aboutscreen .text1 {
-  width: 600px;
+  width: 80%;
+  max-width: 600px;
   float: right;
 }
+@media (min-width: 0px) and (max-width: 1000px) {
+  .aboutscreen .text1 {
+    margin: 30px auto;
+    display: block;
+    float: none;
+  }
+}
 .aboutscreen .text2 {
-  width: 600px;
+  width: 80%;
+  max-width: 600px;
   float: left;
   margin-top: 100px;
+}
+@media (min-width: 0px) and (max-width: 1000px) {
+  .aboutscreen .text2 {
+    margin: 30px auto;
+    display: block;
+    float: none;
+  }
 }
 .aboutscreen .monster_1 {
   height: 200px;
   margin: 30px 0 0 10px;
   overflow: auto;
 }
+@media (min-width: 0px) and (max-width: 1000px) {
+  .aboutscreen .monster_1 {
+    margin: 30px auto;
+    display: block;
+  }
+}
 .aboutscreen .monster_2 {
   height: 200px;
   margin: 130px 40px 0 0px;
   float: right;
+}
+@media (min-width: 0px) and (max-width: 1000px) {
+  .aboutscreen .monster_2 {
+    display: none;
+  }
+}
+.aboutscreen .monster_2_responsive {
+  height: 200px;
+  margin: 30px auto;
+  display: none;
+}
+@media (min-width: 0px) and (max-width: 1000px) {
+  .aboutscreen .monster_2_responsive {
+    display: block;
+  }
 }
 .aboutscreen .monster_3 {
   height: 200px;
   margin: 30px 0 0 -10px;
   overflow: auto;
 }
+@media (min-width: 0px) and (max-width: 1000px) {
+  .aboutscreen .monster_3 {
+    margin: 30px auto;
+    display: block;
+  }
+}
 .aboutscreen .monster_4 {
   height: 200px;
   margin: 130px 40px 0 0px;
   float: right;
+}
+@media (min-width: 0px) and (max-width: 1000px) {
+  .aboutscreen .monster_4 {
+    display: none;
+  }
+}
+.aboutscreen .monster_4_responsive {
+  height: 200px;
+  margin: 30px auto;
+  display: none;
+}
+@media (min-width: 0px) and (max-width: 1000px) {
+  .aboutscreen .monster_4_responsive {
+    display: block;
+  }
 }
