@@ -6,6 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
+	<script src="../js/jquery-1.12.4.js"></script>
+	<script src="../js/jquery-ui.min.js"></script>
 </head>
 <body>
 	<div class="navBody">
@@ -49,5 +51,13 @@
 	<div><!-- week1 -->
 		<p>We start from ideas</p>
 	</div>
+<script>
+	$( '.navButton' ).click(function() {
+	  $( ".navBody" ).show( "fade" );
+	});
+	$( '.navClose' ).click(function() {
+	  $( ".navBody" ).hide( "fade" );
+	});
+</script>
 </body>
 </html>
