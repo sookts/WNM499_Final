@@ -3,15 +3,16 @@
 <head>
 	<meta charset="UTF-8">
 	<title>About This Project</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../css/style.css">
 	<link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<script src="../js/jquery-1.12.4.js"></script>
+	<script src="../js/jquery-ui.min.js"></script>
 </head>
 <body>
-<div class="firstscreen">
-	<nav id="navigationBar">
-		<a href="#">
-			<h1>Bunnytime</h1>
-		</a>
+	<div class="navBody">
+		<a class="navClose" href="#"><img src="../assets/images/close.svg" alt="close"></a>
 		<ul>
 			<a href="../index.html">
 				<li>story</li>
@@ -19,58 +20,89 @@
 			<a href="../game/index.html">
 				<li>game</li>
 			</a>
-			<a href="../about/index.html">
+			<a href="#">
 				<li>about</li>
 			</a>
 			<a href="../process/index.html">
 				<li>process</li>
 			</a>
 		</ul>
-	</nav>
-</div>
-	<div><!-- About this class -->
-		<h2>WNM499 Advanced Web Design</h2>
 	</div>
-	<div><!-- Team -->
-		<h2>Art Team</h2>
-		<div>
-			<label>Enviroment Design</label>
-			<h3>Sookie Park</h3>
-			<img src="">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis, tortor sed efficitur feugiat, turpis nunc aliquet sem, id faucibus odio lacus eget felis. Aenean sed molestie nibh. Sed sodales scelerisque porttitor. Morbi in rhoncus odio. Etiam tristique ex at diam ullamcorper dignissim.</p>
-			<a href="#">Website</a>
-		</div>
-		<div>
-			<label>Character Design</label>
-			<h3>Amy Wu</h3>
-			<img src="">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis, tortor sed efficitur feugiat, turpis nunc aliquet sem, id faucibus odio lacus eget felis. Aenean sed molestie nibh. Sed sodales scelerisque porttitor. Morbi in rhoncus odio. Etiam tristique ex at diam ullamcorper dignissim.</p>
-			<a href="#">Website</a>
+	<div class="aboutscreen">
+		<nav id="navigationBar">
+			<a href="#">
+				<h1>Bunnytime</h1>
+			</a>
+			<ul>
+				<a href="../index.html">
+					<li>story</li>
+				</a>
+				<a href="../game/index.html">
+					<li>game</li>
+				</a>
+				<a href="#">
+					<li>about</li>
+				</a>
+				<a href="../process/index.html">
+					<li>process</li>
+				</a>
+			</ul>
+			<a class="navButton" href="#"><img src="../assets/images/navButton.svg" alt="menu"></a>
+		</nav>
+	<div class="container" style="margin-top: 150px">
+		<div class="monsters">
+			<img class="monster1" src="../assets/images/monster1.svg" alt="Sookie">
+			<img class="monster2" src="../assets/images/monster2.svg" alt="Jacky">
+			<img class="monster3" src="../assets/images/monster3.svg" alt="Amy">
+			<img class="monster4" src="../assets/images/monster4.svg" alt="Tatsuma">
 		</div>
 	</div>
-	<div>
-		<h2>Tech Team</h2>
+	<div class="container"><!-- About this class -->
+		<h2>about the creators</h2>
+	</div>
+	<div class="aboutbox"><!-- Team -->
+		<h2>art team</h2>
 		<div>
-			<label>Frontend Engineer</label>
-			<h3>Tatsuma Nakano</h3>
-			<img src="">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis, tortor sed efficitur feugiat, turpis nunc aliquet sem, id faucibus odio lacus eget felis. Aenean sed molestie nibh. Sed sodales scelerisque porttitor. Morbi in rhoncus odio. Etiam tristique ex at diam ullamcorper dignissim.</p>
-			<a href="#">Website</a>
+			<img class="monster_1" src="../assets/images/monster1.svg">
+			<div class="text1">	
+				<h3>sookie park | environment design</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis, tortor sed efficitur feugiat, turpis nunc aliquet sem, id faucibus odio lacus eget felis. Aenean sed molestie nibh. Sed sodales scelerisque porttitor. Morbi in rhoncus odio. Etiam tristique ex at diam ullamcorper dignissim.</p>
+			</div>
 		</div>
 		<div>
-			<label>Frontend Engineer</label>
-			<h3>Jacky Meng</h3>
-			<img src="">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis, tortor sed efficitur feugiat, turpis nunc aliquet sem, id faucibus odio lacus eget felis. Aenean sed molestie nibh. Sed sodales scelerisque porttitor. Morbi in rhoncus odio. Etiam tristique ex at diam ullamcorper dignissim.</p>
-			<a href="#">Website</a>
+			<div class="text2" style="margin-bottom: 100px">	
+				<h3>amy wu | character design</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis, tortor sed efficitur feugiat, turpis nunc aliquet sem, id faucibus odio lacus eget felis. Aenean sed molestie nibh. Sed sodales scelerisque porttitor. Morbi in rhoncus odio. Etiam tristique ex at diam ullamcorper dignissim.</p>
+			</div>
+			<img class="monster_2" src="../assets/images/monster3.svg">
+		</div>
+	
+		<h2 style="clear: both; ">tech team</h2>
+		<div>
+			<img class="monster_3" src="../assets/images/monster4.svg">
+			<div class="text1">	
+				<h3>tatsuma nakano | front-end engineer</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis, tortor sed efficitur feugiat, turpis nunc aliquet sem, id faucibus odio lacus eget felis. Aenean sed molestie nibh. Sed sodales scelerisque porttitor. Morbi in rhoncus odio. Etiam tristique ex at diam ullamcorper dignissim.</p>
+			</div>
+		</div>
+		<div>
+			<div class="text2">	
+				<h3>jacky meng | front-end engineer</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis, tortor sed efficitur feugiat, turpis nunc aliquet sem, id faucibus odio lacus eget felis. Aenean sed molestie nibh. Sed sodales scelerisque porttitor. Morbi in rhoncus odio. Etiam tristique ex at diam ullamcorper dignissim.</p>
+			</div>
+			<img class="monster_4" src="../assets/images/monster2.svg">
+
 		</div>
 	</div><!-- Team End -->
-	<div>
-		<label>Instructor</label>
-		<h3>Hamilton Cline</h3>
-		<img src="">
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In iaculis, tortor sed efficitur feugiat, turpis nunc aliquet sem, id faucibus odio lacus eget felis. Aenean sed molestie nibh. Sed sodales scelerisque porttitor. Morbi in rhoncus odio. Etiam tristique ex at diam ullamcorper dignissim.</p>
-			<a href="#">Website</a>
-	</div>
+
+</div>
+<script>
+	$( '.navButton' ).click(function() {
+	  $( ".navBody" ).show( "fade" );
+	});
+	$( '.navClose' ).click(function() {
+	  $( ".navBody" ).hide( "fade" );
+	});
+</script>
 </body>
 </html>
