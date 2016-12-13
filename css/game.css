@@ -7,9 +7,10 @@ html, body {
 body {
   position: relative; }
 
-#canvas {
+.canvas {
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  position: absolute; }
 
 #questionWindow {
   width: 300px;
@@ -18,8 +19,8 @@ body {
   left: 50%;
   top: 40%;
   transform: translate(-50%, -50%);
-  background-color: rgba(200, 255, 255, 0.4);
-  border: #c8ffff solid 3px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border: white solid 3px;
   border-radius: 5px;
   text-align: center; }
   #questionWindow input {
@@ -78,5 +79,54 @@ body {
   position: absolute;
   bottom: 50px;
   left: 10px; }
+
+#loading {
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  background: center center url("../assets/images/loading.gif") no-repeat white;
+  background-size: 12%; }
+
+#loading > label {
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.loadingDone {
+  animation: loadingDone 1s forwards; }
+
+.wrong {
+  animation: shake 0.5s forwards; }
+
+.right {
+  animation: rightGreen 1s forwards; }
+
+@keyframes loadingDone {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
+@keyframes shake {
+  0% {
+    left: 51%;
+    background-color: rgba(255, 255, 255, 0.4); }
+  25% {
+    left: 49%; }
+  50% {
+    left: 51%; }
+  100% {
+    left: 50%;
+    background-color: rgba(255, 150, 150, 0.4); } }
+@keyframes rightGreen {
+  0% {
+    background-color: rgba(255, 255, 255, 0.4); }
+  50% {
+    background-color: rgba(150, 255, 150, 0.4); }
+  50% {
+    background-color: rgba(255, 255, 255, 0.4); } }
 
 /*# sourceMappingURL=game.css.map */

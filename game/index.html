@@ -10,8 +10,10 @@
 <body>
 
 <nav id="navigationBar"></nav>
-<script type="text/javascript" src="../js/nav.js"></script><!-- Load Navigation Bar -->
 
+	<canvas id="canvas0" class="canvas" width="getCanvasWidth()" height="getCanvasHeight()"></canvas>
+	<canvas id="canvas1" class="canvas" width="getCanvasWidth()" height="getCanvasHeight()"></canvas>
+	<canvas id="canvas2" class="canvas" width="getCanvasWidth()" height="getCanvasHeight()"></canvas>
 	<p id="resultDisplay"></p>
 	<p id="hpDisplay"></p>
 	<p id="levelDisplay"></p>
@@ -24,16 +26,22 @@
 		<input id="userAnswerInput" type="text">
 	</div>
 
-	<canvas id="canvas" width="getCanvasWidth()" height="getCanvasHeight()"></canvas>
 	
+	<div id="loading">
+		<label>Loading</label>
+	</div>
 </body>
+
 <script type="text/javascript" src="../js/variable.js"></script>
 <script type="text/javascript" src="../js/view.js"></script>
 <script type="text/javascript" src="../js/script.js"></script>
+<script type="text/javascript" src="../js/nav.js"></script><!-- Load Navigation Bar -->
 
 
 <script>
-	document.getElementById("canvas").width = window.innerWidth;
-	document.getElementById("canvas").height = window.innerHeight;
+for(var i = 0; i < canvasLayerAmount; i++){
+	document.getElementById("canvas"+i).width = window.innerWidth;
+	document.getElementById("canvas"+i).height = window.innerHeight;
+	}
 </script>
 </html>

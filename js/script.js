@@ -14,8 +14,7 @@ var qaJSON = {
 		},
 		{
 			"question":"I’m tall when I’m young and I’m short when I’m old. What am I?",
-			"answer":"candle",
-			"alternateAnswer":"pencil"
+			"answer":"candle,pencil"
 		},
 		{
 			"question":"What goes up when rain comes down?",
@@ -75,13 +74,11 @@ var qaJSON = {
 		},
 		{
 			"question":"You will always find me in the past. I can be created in the present, But the future can never taint me. What am I?",
-			"answer":"history",
-			"alternateAnswer":"memories"
+			"answer":"history,memories"
 		},
 		{
 			"question":"What is it that no man ever yet did see, which never was, but always is to be?",
-			"answer":"tomorrow",
-			"alternateAnswer":"future"
+			"answer":"tomorrow,future"
 		}
 	]
 }
@@ -92,7 +89,6 @@ if(initialize == true){
 	initialize = false;
 }
 
-
 //Initialize
 function init(){
 	var resultDisplay = document.getElementById("resultDisplay");
@@ -101,6 +97,7 @@ function init(){
 	hp = 3;
 	displayHitPoint();
 	displayLevel();
+	// console.log("inited")
 }
 
 
@@ -156,41 +153,54 @@ function displayResult(rw){
 // @param {object} the question and answer from JSON
 // Evaluate user input
 function evaluateUserInput(qa){
-	var userAnswer = document.getElementById("userAnswerInput"); 
+	var userAnswer = document.getElementById("userAnswerInput");
+	var questionWindow = document.getElementById("questionWindow") 
 	
 
 	var a = (function(){
-		var notCaseSensitive = userAnswer.value.toLowerCase(); //make answer to not case sensitive
+		// var notCaseSensitive = userAnswer.value.toLowerCase(); //make answer to not case sensitive
 		//Ignore article(a, an)
-		if(notCaseSensitive[0] == "a"){
-			if(notCaseSensitive[1] == " "){
-				return notCaseSensitive.substr(2)
-			}else if(notCaseSensitive[1] == "n" && notCaseSensitive[2] == " "){
-				return notCaseSensitive.substr(3)
-			}else{
-				return notCaseSensitive;
-			}
-		}else{
-			return notCaseSensitive;
-		}
+		// if(notCaseSensitive[0] == "a"){
+		// 	if(notCaseSensitive[1] == " "){
+		// 		return notCaseSensitive.substr(2)
+		// 	}else if(notCaseSensitive[1] == "n" && notCaseSensitive[2] == " "){
+		// 		return notCaseSensitive.substr(3)
+		// 	}else{
+		// 		return notCaseSensitive;
+		// 	}
+		// }else{
+		// 	return notCaseSensitive;
+		// }
+		var found = /(a |an |the |bork |one )(\w+)/i.exec(userAnswer.value);
+		if(found!==null) return found[2];
+		else return userAnswer.value;
 	})();
 
-	if(a == currentQuestion.answer || a == currentQuestion.alternateAnswer){
-		console.log("currentStep",currentStep)
-		animate(currentStep);
+	if(currentQuestion.answer.match(RegExp('(^|,)'+a+'($|,)','i'))!==null){
+		// console.log("currentStep",currentStep)
+		questionWindow.className = "right"
+		animate(currentStep);//from view.js
+		currentStep+=1;
 		displayLevel();
 		displayQuestion(qa,levelControl());
 		// console.log(currentStep);
+		setTimeout(function(){
+			questionWindow.className = ""
+		},500)
 		displayResult(1)
 	}else if(a == ""){
 		alert("Enter an answer!")
 	}else{
+		questionWindow.className = "wrong"
 		gotDamage();
 		displayHitPoint();
 		displayResult(0)
 		if(hp <= 0){
 			gameOver();
 		}
+		setTimeout(function(){
+			questionWindow.className = ""
+		},500)
 	}
 }
 
@@ -211,6 +221,7 @@ function gotDamage(){
 function displayLevel(){
 	var levelDisplay = document.getElementById("levelDisplay");
 	currentLevel = levelControl();
+	currentLevelNum = currentLevelInString(currentLevel)
 	levelDisplay.innerHTML = "LEVEL " + currentLevel;
 }
 
@@ -255,6 +266,20 @@ function showHint(qa,lv){
 				console.log("working")
 				hintDisplay.value = qa[lv][questionNumber].answer.substr(0,i)
 			},3000)
+	}
+}
+
+function currentLevelInString(levelString){
+	switch (levelString){
+		case "easy":
+		return 0
+		break;
+		case "normal":
+		return 1
+		break;
+		case "hard":
+		return 2
+		break;
 	}
 }
 
