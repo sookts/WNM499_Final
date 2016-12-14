@@ -754,6 +754,7 @@ footer p {
 @media (min-width: 0) and (max-width: 500px) {
   .processscreen .processbox {
     padding: 20px 0;
+    width: 90%;
   }
 }
 .processscreen .processbox h2 {

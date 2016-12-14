@@ -671,6 +671,7 @@ footer{
 		padding:150px 0;
 		@include breakpoint(0 500px){
 			padding:20px 0;
+			width: 90%;
 		}
 			h2{
 			font-family: 'Nova Mono', monospace;
