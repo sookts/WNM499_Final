@@ -3,14 +3,61 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Process</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
+	<script src="../js/jquery-1.12.4.js"></script>
+	<script src="../js/jquery-ui.min.js"></script>
 </head>
 <body>
-<nav id="navigationBar"></nav>
-<script type="text/javascript" src="../js/nav.js"></script><!-- Load Navigation Bar -->
-
+	<div class="navBody">
+		<a class="navClose" href="#"><img src="../assets/images/close.svg" alt="close"></a>
+		<ul>
+			<a href="../index.html">
+				<li>story</li>
+			</a>
+			<a href="../game/index.html">
+				<li>game</li>
+			</a>
+			<a href="../about/index.html">
+				<li>about</li>
+			</a>
+			<a href="#">
+				<li>process</li>
+			</a>
+		</ul>
+	</div>
+	<div class="aboutscreen">
+		<nav id="navigationBar">
+			<a href="#">
+				<h1>Bunnytime</h1>
+			</a>
+			<ul>
+				<a href="../index.html">
+					<li>story</li>
+				</a>
+				<a href="../game/index.html">
+					<li>game</li>
+				</a>
+				<a href="../about/index.html">
+					<li>about</li>
+				</a>
+				<a href="#">
+					<li>process</li>
+				</a>
+			</ul>
+			<a class="navButton" href="#"><img src="../assets/images/navButton.svg" alt="menu"></a>
+		</nav>
 	<div><!-- week1 -->
 		<p>We start from ideas</p>
 	</div>
+<script>
+	$( '.navButton' ).click(function() {
+	  $( ".navBody" ).show( "fade" );
+	});
+	$( '.navClose' ).click(function() {
+	  $( ".navBody" ).hide( "fade" );
+	});
+</script>
 </body>
 </html>

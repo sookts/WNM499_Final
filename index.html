@@ -3,23 +3,124 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Story</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	
+	<script src="js/jquery-1.12.4.js"></script>
+	<script src="js/jquery-ui.min.js"></script>
 </head>
 <body>
-<nav id="navigationBar"></nav>
-<script type="text/javascript" src="js/nav.js"></script><!-- Load Navigation Bar -->
+	<div class="navBody">
+		<a class="navClose" href="#"><img src="assets/images/close.svg" alt="close"></a>
+		<ul>
+			<a href="#">
+				<li>story</li>
+			</a>
+			<a href="game/index.html">
+				<li>game</li>
+			</a>
+			<a href="about/index.html">
+				<li>about</li>
+			</a>
+			<a href="process/index.html">
+				<li>process</li>
+			</a>
+		</ul>
+	</div>
+	<div class="firstscreen">
+		<nav id="navigationBar">
+			<a href="#">
+				<h1>Bunnytime</h1>
+			</a>
+			<ul>
+				<a href="#">
+					<li>story</li>
+				</a>
+				<a href="game/index.html">
+					<li>game</li>
+				</a>
+				<a href="about/index.html">
+					<li>about</li>
+				</a>
+				<a href="process/index.html">
+					<li>process</li>
+				</a>
+			</ul>
+			<a class="navButton" href="#"><img src="assets/images/navButton.svg" alt="menu"></a>
 
-	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ultrices, risus nec accumsan malesuada, ante lorem ultrices velit, eget maximus nisl mauris quis leo. Etiam hendrerit feugiat felis et fringilla. Vivamus sollicitudin scelerisque eros, id pharetra nisl dignissim vitae. Duis scelerisque mauris vitae laoreet elementum. Curabitur sed felis vel nunc accumsan convallis molestie id arcu. Vestibulum et odio elit. Maecenas id ultrices velit, non posuere eros. Quisque efficitur nunc ut accumsan luctus. Pellentesque sit amet aliquet arcu. Quisque pulvinar lacus vitae neque tempus, eget sollicitudin sem sodales. Ut id volutpat arcu. Sed nunc urna, hendrerit in volutpat mattis, blandit at nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec tempor diam ac diam elementum, eu finibus quam auctor. Integer accumsan sit amet magna ut venenatis. Pellentesque tincidunt eget dolor porttitor rhoncus.
+		</nav>
+		<img class="bunny" src="assets/images/bunny.svg" alt="bunny">
+		<div class="container">
+			<h2>There you are!</h2>
+			
+			<div class="textbox">
+			<p>We’ve been waiting for a riddlemaster!<br>
+				Bunny’s grandpa has been<br>
+				kidnapped by the riddle monsters...<br>
+				Help Bunny save his grandpa!</p>
+			</div>
+			<a href="#" id="scroll">
+				<svg id="arrow" data-name="arrow" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33.68 19.2"><defs><style>.cls-1{fill:none;stroke:#f4c1d0;stroke-miterlimit:10;stroke-width:3px;}</style></defs><title>arror</title><polyline class="cls-1" points="32.64 1.56 16.47 17.08 1.08 1.04"/></svg>
+				<!-- 
+				<img src="assets/images/arrow.svg" alt="arrow" width="60px" style="margin-top: 40px;stroke:#FFFFFF"> -->
+			</a>
+		</div>
+	</div>
+	<div class="secondscreen">
+		<img class="scroll_top" src="assets/images/scroll_top.svg">
+		<div class="scroll_body">
+			<p>I have your precious grandpa. If you want to see him again, you must defeat my riddle minions. <br><br>
+			Come and find me at the end of the forest.</p>
+		</div>
+		<img class="scroll_bottom" src="assets/images/scroll_bottom.svg">
+		<a href="game/index.html">
+			<div class="start">
+				<p>START GAME</p>
+			</div>
+		</a>
+	</div>
+	<footer>
+		<p>@ 2016</p>
+	</footer>
+<!-- <a href="game/index.html" style="  position: relative; top:60px;">Game Page</a> -->
+<script>
+$(function() {
+	$('#scroll').click(function() {
+        var pos = $('.secondscreen').offset().top;
+       $('html, body').animate({'scrollTop' : pos},1000,'easeInOutQuart');
+            return false;
+    });
+});
+</script>
+<script>
+	$(window).scroll(function(){
+			 var fromtop = $(document).scrollTop();       // pixels from top of screen
+			 console.log ( fromtop);
+		       if ( fromtop >= 650 ) {
+		       		 $(".scroll_body").addClass("animation");
+		       		 setTimeout(function(){ $( ".start" ).show( "fade", 500); }, 1000);
+		       }
+});
 
-Suspendisse eu dignissim urna. Vestibulum in dignissim neque, non dapibus ante. In placerat lectus vel est bibendum, a rhoncus eros bibendum. Proin pulvinar tempor ex, sit amet imperdiet urna eleifend eu. Nulla id imperdiet leo. Sed ultricies ante sed dignissim ornare. Nullam ultrices quam sem, eget rutrum justo elementum porta. Fusce sagittis augue egestas sem posuere feugiat. Integer auctor mi non neque semper tristique. Maecenas pharetra dui eget est fermentum imperdiet. Aenean fringilla massa sit amet volutpat dignissim. Donec dolor libero, dapibus ut orci vel, lobortis rhoncus ipsum. Donec vel pellentesque lacus, et egestas elit.
+</script>
+<script>
+	$( '.navButton' ).click(function() {
+	  $( ".navBody" ).show( "fade" );
+	});
+	$( '.navClose' ).click(function() {
+	  $( ".navBody" ).hide( "fade" );
+	});
+</script>
 
-Aliquam id euismod enim. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin nec rhoncus mauris, at rhoncus mauris. Suspendisse varius euismod dolor, in placerat nisi dignissim quis. Ut venenatis nunc non risus viverra, et vulputate lorem tincidunt. Vivamus mollis pretium malesuada. Quisque vitae dui sagittis, porttitor ex quis, euismod urna. Fusce bibendum lectus eu sodales dictum. Nulla vel lobortis sem, at sagittis eros. Fusce commodo est eget porta posuere. Duis vehicula urna arcu, at euismod odio ultrices vitae.
 
-Curabitur feugiat ultricies mauris, vitae accumsan sapien. Mauris rutrum mauris vitae metus tincidunt, eu sodales augue fringilla. In hac habitasse platea dictumst. Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce hendrerit ornare erat, id facilisis leo vehicula posuere. Integer eu finibus nisl. Fusce rhoncus id dui eget consectetur. Fusce tempor diam arcu, vulputate porttitor dui malesuada vitae. Integer tempus, nibh in fringilla ultricies, risus nunc egestas orci, et eleifend tellus ante vel tellus. Phasellus at congue dolor, ac aliquet velit.
 
-Integer auctor mauris et luctus porta. Phasellus et porttitor mauris, quis pharetra sem. In ut dapibus mauris. Integer dapibus id nisl id dictum. Nulla mattis turpis eget libero luctus vestibulum. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nunc sem nibh, sagittis sit amet sem et, placerat hendrerit orci. Morbi tristique euismod est. Nunc sodales dictum quam, et rutrum nisl. Suspendisse tincidunt velit sit amet est gravida, eu tincidunt neque condimentum. Suspendisse ultricies est massa, nec sagittis justo vestibulum tristique. Etiam at leo sagittis, dignissim elit eu, ultricies felis.
-</p>
 
-<a href="game">Game Page</a>
+
+
+
 </body>
+
 </html>
