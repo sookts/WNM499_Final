@@ -4,82 +4,161 @@
 
 var qaJSON = {
 	"easy":[
-		{
+			{
+			"question":"Take off my skin - I won't cry, but you will! What am I?",
+			"answer":"onion",
+			"hint":"It’s round."
+			},
+			{
 			"question": "A seven letter word containing thousands of letters",
-			"answer": "mailbox"
-		},
-		{
+			"answer": "mailbox,mail box",
+			"hint":"Holds things."
+			},
+			{
+			"question": "What body part is pronounced as one letter but written with three, only two different letters are used?",
+			"answer": "eye",
+			"hint":"It’s on your face."
+			},			
+			{
 			"question":"What has a foot but no legs?",
-			"answer":"snail"
-		},
-		{
-			"question":"I’m tall when I’m young and I’m short when I’m old. What am I?",
-			"answer":"candle,pencil"
-		},
-		{
-			"question":"What goes up when rain comes down?",
-			"answer":"umbrella"
-		},
-		{
-			"question":"If I drink, I die. If I eat, I am fine. What am I?",
-			"answer":"fire"
-		},
-		{
+			"answer":"ruler,snail",
+			"hint":"A measuring tool."
+			},		
+			{
 			"question":"What has one eye but cannot see?",
-			"answer":"needle"
-		},
-		{
-			"question":"If a blue house is made out of blue bricks, a yellow house is made out of yellow bricks and a pink house is made out of pink bricks, what is a green house made of?",
-			"answer":"glass"
-		},
-		{
+			"answer":"needle",
+			"hint":"Can be found in a sewing kit."
+			},
+			{
+			"question":"If a blue house is made out of blue bricks, a yellow house is made 			out of yellow bricks and a pink house is made out of pink bricks, what is a green house made of?",
+			"answer":"glass",
+			"hint":"See-through material."
+			},
+			{
+			"question":"What kind of tree can you carry in your hand?",
+			"answer":"palm tree,palm",
+			"hint":"Found in Los Angeles."
+			},
+			{
 			"question":"Teddy bears are never hungry because they are always what?",
-			"answer":"stuffed"
-		}
+			"answer":"stuffed",
+			"hint":"Full."	
+			},
+			{
+			"question":"Mr. Smith has 4 daughters. Each of his daughters has a brother. How many children does Mr. Smith have?	",
+			"answer":"five,5",
+			"hint":"Least number of brother(s)."
+			},
+			{
+			"question":"What always ends everything?",
+			"answer":"g",
+			"hint":"Look at the word."
+			}
+
 	],
 	"normal":[
-		{
-			"question":"What has 4 eyes but can’t see?",
-			"answer":"mississippi"
-		},
-		{
+			{
+			"question":"If I drink, I die. If I eat, I am fine. What am I?",
+			"answer":"fire",
+			"hint":"It’s hot."
+			},		
+			{
 			"question":"Which vehicle is spelled the same forwards and backwards?",
-			"answer":"racecar"
-		},
-		{
+			"answer":"racecar,race car",
+			"hint":"You drive fast in it."
+			},
+			{
 			"question":"What flies without wings?",
-			"answer":"time"
-		},
-		{
+			"answer":"time",
+			"hint":"Clock."
+			},
+			{
+			"question":"What gets wetter and wetter the more it dries?",
+			"answer":"towel",
+			"hint":"It’s in your bathroom."
+			},
+			{
 			"question":"What five-letter word becomes shorter when you add two letters to it?",
-			"answer":"short"
-		},
-		{
-			"question":"What gets broken without being held?",
-			"answer":"promise"
-		}
+			"answer":"short",
+			"hint":"Answer is in the riddle."
+			},
+			{
+			"question":"You will always find me in the past. I can be created in the present, But the future can never taint me. What am I?",
+			"answer":"history,memories",
+			"hint":"Something you reflect on."
+			},
+			{
+			"question":"I have keys, but no locks. I have space, but no room. You can enter, but not exit. What am I?",
+			"answer":"keyboard,key board",
+			"hint":"It also has the alphabet and numbers."
+			},
+			{
+			"question":"I’m light as a feather, yet the strongest man can’t hold me for more than 5 minutes. What am I?",
+			"answer":"breath",
+			"hint":"Swimmers hold this."
+			},
+			{
+			"question":"I am the only organ that named myself. What am I?",
+			"answer":"brain",
+			"hint":"Think."
+			},
+			{
+			"question":"What goes up when rain comes down?",
+			"answer":"umbrella",
+			"hint":"Used outdoors."
+			}
 	],
 	"hard":[
-		{
-			"question":"Poor people have it. Rich people need it. If you eat it you die. what is it?",
-			"answer":"nothing"
-		},
-		{
-			"question":"There was a green house. Inside the green house there was a white house Inside the white house there was a red house. Inside the red house there were lots of babies. What am I?",
-			"answer":"watermelon"
-		},
-		{
-			"question":"A little pool with two layers of wall around it. One white and soft and the other dark and hard, amidst a light brown grassy lawn with an outline of a green grass. What am I?",
-			"answer":"coconut"
-		},
-		{
-			"question":"You will always find me in the past. I can be created in the present, But the future can never taint me. What am I?",
-			"answer":"history,memories"
-		},
-		{
-			"question":"What is it that no man ever yet did see, which never was, but always is to be?",
-			"answer":"tomorrow,future"
-		}
+			{
+			"question":"I have no wallet but I pay my way. I travel the world but in the corner I stay. What am I?",
+			"answer":"stamp",
+			"hint":"You use it to send things."
+			},
+			{
+			"question":"I’m tall when I’m young and I’m short when I’m old. What am I?",
+			"answer":"candle,pencil",
+			"hint":"It illuminates."
+			},
+			{
+			"question":"What has 4 eyes but can’t see?",
+			"answer":"mississippi",
+			"hint":"It's a location."
+			},
+			{
+			"question":"What gets broken without being held?",
+			"answer":"promise",
+			"hint":"You make these with loved ones."
+			},		
+			{
+			"question":"Poor people have it. Rich people need it. If you eat it you die. What is it?",
+			"answer":"nothing",
+			"hint":"Not everything or anything."
+			},						
+			{
+			"question":"There was a green house. Inside the green house, there was a white house. Inside the white house, there was a red house. Inside the red house, there were lots of babies. What am I?",
+			"answer":"watermelon",
+			"hint":"You eat it."
+			},		
+			{
+			"question":"Paul's height is six feet, he's an assistant at a butcher's shop, and wears size 9 shoes. What does he weigh?",
+			"answer":"meat",
+			"hint":"Where does he work again?"
+			},
+			{
+			"question":"What never asks questions but is always answered. What am I?",
+			"answer":"doorbell,door bell",
+			"hint":"It’s on every house."
+			},
+			{
+			"question":"They have not flesh, nor feathers, nor scales, nor bone. Yet they have fingers and thumbs of their own. What are they?",
+			"answer":"gloves",
+			"hint":"Seen during cold weather."
+			},
+			{
+			"question":"The dirtier I am, the whiter I get. Leave a mark on me when you stand, I'll leave a mark on you when you sit. What am I?",
+			"answer":"chalkboard,chalk board",
+			"hint":"Present in classrooms."
+			}
 	]
 }
 
