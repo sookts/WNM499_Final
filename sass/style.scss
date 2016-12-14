@@ -1,0 +1,663 @@
+@import "partials/functions";
+@import "partials/variables";
+@import "compass";
+@import "susy";
+@import "breakpoint";
+
+html,body{
+	@include fullWH();
+	margin: 0;
+}
+
+// #navigationBar{
+// 	width:100%;
+// 	height:$navbar-height;
+// 	background-color: rgba(0,0,0,0.1);
+// 	position: absolute;
+// 	ul{
+// 		float: right;
+// 		margin: calc((50px - 1em)/2) 0;
+// 		li{
+// 			float: left;
+// 			list-style: none;
+// 			padding-right: 2em;
+// 			a{
+// 				color: black;
+// 				text-decoration: none;
+// 			}
+// 		}
+// 	}
+
+// }
+
+#navigationBar{
+	height: 100px;
+		h1{
+			font-family: 'Nova Mono', monospace;
+			font-size: 60px;
+			color: #F9CDDC;
+			display: inline-block;
+			margin:30px 0 0 80px;
+			font-weight: 400;
+			transition: all 0.3s ease;
+			-webkit-transition: all 0.3s ease;
+
+			&:hover{
+				color:white;
+			}
+			@include breakpoint(800px 1050px){
+				font-size:50px;
+			}	
+			@include breakpoint(600px 799px){
+				font-size:30px;
+			}
+			@include breakpoint(0 599px){
+				font-size:30px;
+				margin:30px 0 0 30px;
+			}		
+		}
+		ul{
+			list-style-type: none;
+			float: right;
+			display: inline-block;
+			margin-right: 80px;
+			@include breakpoint(0px 1050px){
+				display: none;
+			}	
+			a{
+				text-decoration: none;
+					li{
+						display: inline-block;
+						margin: 30px 50px 0 0;
+						color: #F9CDDC;
+						font-family: 'Nova Mono', monospace;
+						font-size: 25px;
+						transition: all 0.3s ease;
+						-webkit-transition: all 0.3s ease;
+						&:hover{
+							color:white;
+						}
+					}
+			}
+
+		}
+		.navButton{
+			width: 55px;
+			float: right;
+			margin: 43px 80px 0 0;
+			display: none;
+			transition: all 0.3s ease;
+			-webkit-transition: all 0.3s ease;
+			@include breakpoint(800px 1050px){
+				width: 55px;
+				display: block;
+				margin: 50px 80px 0 0;
+			}	
+			@include breakpoint(600px 799px){
+				width: 40px;
+				display: block;
+			}
+			@include breakpoint(0px 599px){
+				width: 40px;
+				display: block;
+				margin: 43px 30px 0 0;
+			}	
+		}
+
+}
+
+.navSetGamePage{
+	position: absolute;
+	z-index: 999;
+}
+
+// html,body{
+// 	height: 100%;
+// 	width: 100%;
+// 	margin: 0;
+
+.firstscreen{
+	height: 100%;
+	min-height: 925px;
+	width: 100%;
+	background-color: rgb(0,176,132);
+	@include breakpoint(0px 450px){
+		min-height: initial;
+	}
+	h2{
+		font-family: 'Nova Mono', monospace;
+		font-size: 55px;
+		color: white;
+		font-weight: 400;
+		margin-bottom: 0;
+		position: relative;
+		left: -120px;
+		transition: all 0.3s ease;
+      	-webkit-transition: all 0.3s ease;
+		@include breakpoint(800px 1050px){
+			font-size:50px;
+		}
+		@include breakpoint(650px 799px){
+			font-size:30px;
+		}	
+		@include breakpoint(0px 649px){
+			font-size:30px;
+			position: static;
+			float: left;
+			margin-left: 10%
+		}	
+	}
+	.textbox{
+		text-align: left;
+		width:600px;
+		margin-left: auto;
+		margin-right: auto;
+		display: block;
+		overflow: auto;
+		transition: all 0.3s ease;
+      	-webkit-transition: all 0.3s ease;
+      	@include breakpoint(800px 1049px){
+      		width: 500px;
+      	}
+		@include breakpoint(650px 799px){
+			width: 420px;
+		}
+		@include breakpoint(0px 649px){
+			width: 80%;
+			margin-left: 10%;
+			
+		}
+	}
+	p{
+		font-family: 'Open Sans', sans-serif;
+		// font-family: 'Nova Mono', monospace;
+		font-size: 32px;
+		color: white;
+		transition: all 0.3s ease;
+      	-webkit-transition: all 0.3s ease;
+		@include breakpoint(800px 1050px){
+			font-size:27px;
+		}
+		@include breakpoint(500px 799px){
+			font-size:22px;
+		}
+		@include breakpoint(0 499px){
+			font-size: 20px;
+			// text-align: justify;
+		}		
+	}
+}
+.secondscreen{
+	height: 100%;
+	min-height: 1200px;
+	width: 100%;
+	background-color:rgb(249,217,229);
+	@include breakpoint(800px 1050px){
+		min-height: 1120px;
+	}
+	@include breakpoint(660px 799px){
+		min-height: 930px;
+	}
+	@include breakpoint(450px 659px){
+		min-height: 900px;
+	}
+	@include breakpoint(0px 449px){
+		min-height: 900px;
+	}
+}
+#navigationBar{
+	height: 100px;
+		h1{
+			font-family: 'Nova Mono', monospace;
+			font-size: 60px;
+			color: #F9CDDC;
+			display: inline-block;
+			margin:30px 0 0 80px;
+			font-weight: 400;
+			transition: all 0.3s ease;
+			-webkit-transition: all 0.3s ease;
+
+			&:hover{
+				color:white;
+			}
+			@include breakpoint(800px 1050px){
+				font-size:50px;
+			}	
+			@include breakpoint(600px 799px){
+				font-size:30px;
+			}
+			@include breakpoint(0 599px){
+				font-size:30px;
+				margin:30px 0 0 30px;
+			}		
+		}
+		ul{
+			list-style-type: none;
+			float: right;
+			display: inline-block;
+			margin-right: 80px;
+			@include breakpoint(0px 1050px){
+				display: none;
+			}	
+			a{
+				text-decoration: none;
+					li{
+						display: inline-block;
+						margin: 30px 50px 0 0;
+						color: #F9CDDC;
+						font-family: 'Nova Mono', monospace;
+						font-size: 25px;
+						transition: all 0.3s ease;
+						-webkit-transition: all 0.3s ease;
+						&:hover{
+							color:white;
+						}
+					}
+			}
+
+		}
+		.navButton{
+			width: 55px;
+			float: right;
+			margin: 43px 80px 0 0;
+			display: none;
+			transition: all 0.3s ease;
+			-webkit-transition: all 0.3s ease;
+			@include breakpoint(800px 1050px){
+				width: 55px;
+				display: block;
+				margin: 50px 80px 0 0;
+			}	
+			@include breakpoint(600px 799px){
+				width: 40px;
+				display: block;
+			}
+			@include breakpoint(0px 599px){
+				width: 40px;
+				display: block;
+				margin: 43px 30px 0 0;
+			}	
+		}
+
+}
+.navBody{
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+	background-color:rgb(252,165,94);
+	position:fixed;
+	display:none;
+		.navClose{
+			width: 40px;
+			float: right;
+			margin:37px 35px 0 0;
+			@include breakpoint(800px 1050px){
+				width: 40px;
+				margin: 44px 85px 0 0;
+			}
+			@include breakpoint(600px 799px){
+				width: 30px;
+				margin: 38px 85px 0 0;
+			}
+			@include breakpoint(0px 599px){
+				width: 30px;
+				margin:37px 35px 0 0;
+			}
+		}
+		ul{
+			list-style-type: none;
+			position:absolute;
+			top:50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			text-align: center;
+			a{
+				text-decoration: none;
+					li{
+						display: block;
+						margin: 30px 30px 0 0;
+						color: #FFFFFF;
+						font-family: 'Nova Mono', monospace;
+						font-size: 20px;
+						transition: all 0.3s ease;
+						-webkit-transition: all 0.3s ease;
+						&:hover{
+							color:white;
+						}
+					}
+			}
+		}
+}
+.st0{
+	stroke: #FFFFFF;
+}
+.bunny{
+	width:100px;
+	margin: 150px auto 0 auto;
+	display: block;
+	transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+	@include breakpoint(0px 500px){
+		margin: 10px auto 0 auto;
+		width: 70px;
+	}
+}
+.container{
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+#arrow{
+	width: 60px;
+	margin-top: 50px;
+}
+.cls-1{
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+}
+#scroll{
+	
+		&:hover .cls-1{
+		stroke:#ffffff;
+		}
+}
+.scroll_top{
+	width: 800px;
+	display: block;
+	padding-top: 100px;
+	margin:0 auto 0 auto;
+	transition: all 1.3s ease;
+	-webkit-transition: all 1.3s ease;
+		@include breakpoint(550px 1050px){
+			width: 80%;
+		}
+		@include breakpoint(0 549px){
+			width: 100%;
+			position: relative;
+			top:-20px;
+		}	
+}
+.scroll_bottom{
+	width: 800px;
+	display: block;
+	margin:-40px auto 0 auto;
+	transition: all 1.3s ease;
+	-webkit-transition: all 1.3s ease;
+		@include breakpoint(800px 1050px){
+			width: 80%;
+		}
+		@include breakpoint(550px 799px){
+			width: 80%;
+			margin:-10px auto 0 auto;
+		}
+		@include breakpoint(0 549px){
+			width: 100%;
+			margin:-10px auto 0 auto;
+		}
+}
+.scroll_body{
+	/*display: none;*/
+	width: 800px;
+	height: 0px;
+	overflow: hidden;
+	margin:-50px auto 0 auto;
+	background-color:#D3D1B2;
+	background-image: 
+	url("../assets/images/scroll_left.svg"),
+	url("../assets/images/scroll_right.svg");
+	background-size:100px;
+	background-repeat:repeat-y, repeat-y;
+	background-position:
+	center left,
+	center right;
+	// background-size: cover;
+
+	transition: all 1.3s ease;
+	-webkit-transition: all 1.3s ease;
+	-moz-transition: all 1.3s ease;
+	-o-transition: all 1.3s ease;
+	
+		@include breakpoint(550px 1050px){
+			width: 80%;
+			/*background-size:100% 100%;*/
+			// background-size: cover;
+		}
+		@include breakpoint(0 549px){
+			width: 100%;
+			
+			/*background-size:100% 100%;*/
+			// background-size: cover;
+		}
+		p{
+			font-family: 'Covered By Your Grace', cursive;
+			font-size: 50px;
+			margin:100px 20% 100px 20%;
+				@include breakpoint(800px 1050px){
+					font-size: 40px;
+				}
+				@include breakpoint(660px 799px){
+					font-size: 35px;
+					// margin:100px 20%;
+				}
+				@include breakpoint(0px 659px){
+					font-size: 30px;
+					margin:100px 20%;
+				}				
+		}
+}
+.animation{
+	height: 680px;
+	transition: all 1.3s ease;
+	-webkit-transition: all 1.3s ease;
+
+		@include breakpoint(800px 1050px){
+			height: 600px;
+		}
+		@include breakpoint(660px 799px){
+			height: 500px;
+		}
+		@include breakpoint(410px 659px){
+			height: 480px;
+		}
+		@include breakpoint(330px 410px){
+			height: 520px;
+		}
+		@include breakpoint(0px 330px){
+			height: 560px;
+		}
+}
+a{
+	text-decoration: none;
+}
+.start{
+	display: none;
+	width: 250px;
+	height:64px;
+	background:#00B084;
+	border-radius: 15px;
+	-webkit-border-radius:15px;
+	margin: 50px auto;
+	text-align: center;
+	transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	&:hover{
+		background:#03845F;
+	}
+	&:hover p{
+		color:#E2E2E2;
+	}
+	p{
+		color: #FFFFFF;
+		font-family: 'Nova Mono', monospace;
+		font-size: 25px;
+		padding-top: 13px;
+	}
+	
+}
+footer{
+	height: 80px;
+	background-color: rgb(0,176,132);
+	text-align: center;
+	 p{
+	 	font-family: 'Nova Mono', monospace;
+		font-size: 20px;
+		color: white;
+		position: relative;
+		top:20px;
+		-webkit-margin-before: 0em;
+	    -webkit-margin-after: 0em;
+	 }
+}
+.monsters{
+	width: 800px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	@include breakpoint(0 830px){
+		display: none;
+	}
+	.monster1{
+		height: 200px;
+		margin-right: 50px;
+	}
+	.monster2{
+		height: 190px;
+		margin-right: 50px;
+	}
+	.monster3{
+		height: 210px;
+		margin-right: 40px;
+	}
+	.monster4{
+		height: 200px;
+	}
+}
+.aboutscreen{
+	height: 2300px;
+	width: 100%;
+	background-color: rgb(0,176,132);
+	@include breakpoint(0 1000px){
+		height: auto;
+	}
+	.aboutbox{
+		width: 80%;
+		max-width: 800px;
+		margin:0px auto;
+		padding-top: 100px;
+		padding-bottom: 100px;
+		@include breakpoint(0 830px){
+			padding-top: 0;
+		}
+	}
+	h2{
+		font-family: 'Nova Mono', monospace;
+		font-size: 35px;
+		color: white;
+		font-weight: 400;
+		margin-bottom: 0;
+		margin-top: 50px;
+		transition: all 0.3s ease;
+      	-webkit-transition: all 0.3s ease;
+		@include breakpoint(0px 1000px){
+			text-align: center;
+		}
+/*		@include breakpoint(650px 799px){
+			font-size:35px;
+		}	
+		@include breakpoint(0px 649px){
+			font-size:25px;
+		}	*/
+	}
+	h3{
+		font-family: 'Nova Mono', monospace;
+		font-size: 25px;
+		color: white;
+	}
+	p{
+		font-family: 'Open Sans', sans-serif;
+		font-size: 20px;
+		color: white;
+		@include breakpoint(0px 1000px){
+			text-align: justify;
+
+		}
+	}
+	.creator{
+		@include breakpoint(0px 830px){
+			display: none;
+
+		}
+	}
+	.text1{
+		width: 80%;
+		max-width: 600px;
+		float: right;
+		@include breakpoint(0px 1000px){
+			margin: 30px auto;
+			display: block;
+			float: none;
+		}
+	}
+	.text2{
+		width: 80%;
+		max-width: 600px;
+		float: left;
+		margin-top: 100px;
+		@include breakpoint(0px 1000px){
+			margin: 30px auto;
+			display: block;
+			float: none;
+		}
+	}
+	.monster_1{
+		height: 200px;
+		margin: 30px 0 0 10px;
+		overflow: auto;
+		@include breakpoint(0px 1000px){
+			margin: 30px auto;
+			display: block;
+		}
+	}
+	.monster_2{
+		height: 200px;
+		margin: 130px 40px 0 0px;
+		float: right;
+		@include breakpoint(0px 1000px){
+			display: none;
+		}
+	}
+	.monster_2_responsive{
+		height: 200px;
+		margin: 30px auto;
+		display: none;
+		@include breakpoint(0px 1000px){
+			display: block;
+		}
+	}
+	.monster_3{
+		height: 200px;
+		margin: 30px 0 0 -10px;
+		overflow: auto;
+		@include breakpoint(0px 1000px){
+			margin: 30px auto;
+			display: block;
+		}
+	}
+	.monster_4{
+		height: 200px;
+		margin: 130px 40px 0 0px;
+		float: right;
+		@include breakpoint(0px 1000px){
+			display: none;
+		}
+	}
+	.monster_4_responsive{
+		height: 200px;
+		margin: 30px auto;
+		display: none;
+		@include breakpoint(0px 1000px){
+			display: block;
+		}
+	}
+	
+}

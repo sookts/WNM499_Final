@@ -204,6 +204,7 @@ function displayQuestion(qa,lv){
 		var randomQuestion = qa[lv][questionNumber];
 		// console.log("questionNumber",questionNumber)
 		questionDisplay.innerHTML = randomQuestion.question;
+		hamilton = randomQuestion.hint;
 		currentQuestion = randomQuestion;
 		deleteQuestion(qa,lv);
 	}else{
@@ -301,7 +302,7 @@ function displayLevel(){
 	var levelDisplay = document.getElementById("levelDisplay");
 	currentLevel = levelControl();
 	currentLevelNum = currentLevelInString(currentLevel)
-	levelDisplay.innerHTML = "LEVEL " + currentLevel;
+	// levelDisplay.innerHTML = "LEVEL " + currentLevel; 
 }
 
 function levelControl(){
