@@ -1,7 +1,99 @@
 html, body {
-  height: 100%;
   width: 100%;
+  height: 100%;
   margin: 0;
+}
+
+#navigationBar {
+  height: 100px;
+}
+#navigationBar h1 {
+  font-family: 'Nova Mono', monospace;
+  font-size: 60px;
+  color: #F9CDDC;
+  display: inline-block;
+  margin: 30px 0 0 80px;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+#navigationBar h1:hover {
+  color: white;
+}
+@media (min-width: 800px) and (max-width: 1050px) {
+  #navigationBar h1 {
+    font-size: 50px;
+  }
+}
+@media (min-width: 600px) and (max-width: 799px) {
+  #navigationBar h1 {
+    font-size: 30px;
+  }
+}
+@media (min-width: 0) and (max-width: 599px) {
+  #navigationBar h1 {
+    font-size: 30px;
+    margin: 30px 0 0 30px;
+  }
+}
+#navigationBar ul {
+  list-style-type: none;
+  float: right;
+  display: inline-block;
+  margin-right: 80px;
+}
+@media (min-width: 0px) and (max-width: 1050px) {
+  #navigationBar ul {
+    display: none;
+  }
+}
+#navigationBar ul a {
+  text-decoration: none;
+}
+#navigationBar ul a li {
+  display: inline-block;
+  margin: 30px 50px 0 0;
+  color: #F9CDDC;
+  font-family: 'Nova Mono', monospace;
+  font-size: 25px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+#navigationBar ul a li:hover {
+  color: white;
+}
+#navigationBar .navButton {
+  width: 55px;
+  float: right;
+  margin: 43px 80px 0 0;
+  display: none;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+@media (min-width: 800px) and (max-width: 1050px) {
+  #navigationBar .navButton {
+    width: 55px;
+    display: block;
+    margin: 50px 80px 0 0;
+  }
+}
+@media (min-width: 600px) and (max-width: 799px) {
+  #navigationBar .navButton {
+    width: 40px;
+    display: block;
+  }
+}
+@media (min-width: 0px) and (max-width: 599px) {
+  #navigationBar .navButton {
+    width: 40px;
+    display: block;
+    margin: 43px 30px 0 0;
+  }
+}
+
+.navSetGamePage {
+  position: absolute;
+  z-index: 999;
 }
 
 .firstscreen {
