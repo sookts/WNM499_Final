@@ -1,0 +1,176 @@
+/* line 4, ../sass/game.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* line 10, ../sass/game.scss */
+body {
+  position: relative;
+}
+
+/* line 18, ../sass/game.scss */
+.canvas {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+/* line 23, ../sass/game.scss */
+#questionWindow {
+  width: 300px;
+  min-height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.4);
+  border: white solid 3px;
+  border-radius: 5px;
+  text-align: center;
+}
+/* line 35, ../sass/game.scss */
+#questionWindow input {
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  width: 95%;
+  margin: 0;
+  padding: 0;
+  border: none;
+  height: 25px;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+  text-align: center;
+  color: white;
+  position: absolute;
+  transform: translateX(-50%);
+}
+/* line 50, ../sass/game.scss */
+#questionWindow input:focus {
+  outline: none;
+}
+
+/* line 56, ../sass/game.scss */
+#hintDisplay {
+  font-family: sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  position: absolute;
+  width: 95%;
+  height: 25px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  color: rgba(255, 255, 255, 0.5);
+}
+/* line 67, ../sass/game.scss */
+#hintDisplay span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* line 76, ../sass/game.scss */
+.container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* line 81, ../sass/game.scss */
+#hpDisplay {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #FFF;
+}
+
+/* line 88, ../sass/game.scss */
+#levelDisplay {
+  position: absolute;
+  bottom: 30px;
+  left: 10px;
+  color: #FFF;
+}
+
+/* line 95, ../sass/game.scss */
+#resultDisplay {
+  position: absolute;
+  bottom: 50px;
+  left: 10px;
+}
+
+/* line 101, ../sass/game.scss */
+#loading {
+  width: 100%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  background: center center url("../assets/images/loading.gif") no-repeat white;
+  background-size: 12%;
+}
+
+/* line 112, ../sass/game.scss */
+#loading > label {
+  position: absolute;
+  bottom: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* line 119, ../sass/game.scss */
+.loadingDone {
+  animation: loadingDone 1s forwards;
+}
+
+/* line 126, ../sass/game.scss */
+.wrong {
+  animation: shake 0.5s forwards;
+}
+
+/* line 130, ../sass/game.scss */
+.right {
+  animation: rightGreen 1s forwards;
+}
+
+@keyframes loadingDone {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes shake {
+  0% {
+    left: 51%;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  25% {
+    left: 49%;
+  }
+  50% {
+    left: 51%;
+  }
+  100% {
+    left: 50%;
+    background-color: rgba(255, 150, 150, 0.4);
+  }
+}
+@keyframes rightGreen {
+  0% {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  50% {
+    background-color: rgba(150, 255, 150, 0.4);
+  }
+  50% {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+}
