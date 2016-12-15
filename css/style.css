@@ -113,8 +113,6 @@ html, body {
   color: white;
   font-weight: 400;
   margin-bottom: 0;
-  position: relative;
-  left: -120px;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
 }
@@ -131,9 +129,6 @@ html, body {
 @media (min-width: 0px) and (max-width: 649px) {
   .firstscreen h2 {
     font-size: 30px;
-    position: static;
-    float: left;
-    margin-left: 10%;
   }
 }
 .firstscreen .textbox {
@@ -607,9 +602,15 @@ footer p {
   padding-top: 100px;
   padding-bottom: 100px;
 }
-@media (min-width: 0) and (max-width: 830px) {
+@media (min-width: 500px) and (max-width: 830px) {
   .aboutscreen .aboutbox {
     padding-top: 0;
+  }
+}
+@media (min-width: 0) and (max-width: 500px) {
+  .aboutscreen .aboutbox {
+    padding-top: 0;
+    width: 90%;
   }
 }
 .aboutscreen h2 {
@@ -645,7 +646,7 @@ footer p {
 }
 @media (min-width: 0px) and (max-width: 1000px) {
   .aboutscreen p {
-    text-align: justify;
+    font-size: 20px;
   }
 }
 @media (min-width: 0px) and (max-width: 830px) {
@@ -654,7 +655,6 @@ footer p {
   }
 }
 .aboutscreen .text1 {
-  width: 80%;
   max-width: 600px;
   float: right;
 }
@@ -666,7 +666,6 @@ footer p {
   }
 }
 .aboutscreen .text2 {
-  width: 80%;
   max-width: 600px;
   float: left;
   margin-top: 100px;

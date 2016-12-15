@@ -130,8 +130,8 @@ html,body{
 		color: white;
 		font-weight: 400;
 		margin-bottom: 0;
-		position: relative;
-		left: -120px;
+		// position: relative;
+		// left: -120px;
 		transition: all 0.3s ease;
       	-webkit-transition: all 0.3s ease;
 		@include breakpoint(800px 1050px){
@@ -142,9 +142,9 @@ html,body{
 		}	
 		@include breakpoint(0px 649px){
 			font-size:30px;
-			position: static;
-			float: left;
-			margin-left: 10%
+			// position: static;
+			// float: left;
+			// margin-left: 10%
 		}	
 	}
 	.textbox{
@@ -545,8 +545,12 @@ footer{
 		margin:0px auto;
 		padding-top: 100px;
 		padding-bottom: 100px;
-		@include breakpoint(0 830px){
+		@include breakpoint(500px 830px){
 			padding-top: 0;
+		}
+		@include breakpoint(0 500px){
+			padding-top: 0;
+			width: 90%;
 		}
 	}
 	h2{
@@ -578,7 +582,7 @@ footer{
 		font-size: 20px;
 		color: white;
 		@include breakpoint(0px 1000px){
-			text-align: justify;
+			font-size: 20px;
 
 		}
 	}
@@ -589,7 +593,7 @@ footer{
 		}
 	}
 	.text1{
-		width: 80%;
+		// width: 80%;
 		max-width: 600px;
 		float: right;
 		@include breakpoint(0px 1000px){
@@ -599,7 +603,7 @@ footer{
 		}
 	}
 	.text2{
-		width: 80%;
+		// width: 80%;
 		max-width: 600px;
 		float: left;
 		margin-top: 100px;
