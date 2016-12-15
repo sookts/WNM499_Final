@@ -1,8 +1,6 @@
 # WNM499_Final
 Our sweet team project for wonderful Halmiton
 
-<<<<<<< HEAD
-=======
 
 
 
@@ -20,4 +18,3 @@ Our sweet team project for wonderful Halmiton
 
 ###Jacky Meng 
 `https://github.com/JackyMeng/WNM499_Final.git`
->>>>>>> 3e5f24e96a8acad4df4fe507df1fe3076f6f58d1
