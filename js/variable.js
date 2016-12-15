@@ -34,3 +34,4 @@ let currentLevelImageSize;
 var allTreeImageAssetsCount = 0;
 var allMonstersImageAssetsCount = 0;
 
+var hamilton;

@@ -4,6 +4,8 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
 	<title>Story Game</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
 	<link rel="stylesheet" href="../css/game.css">
 	<link rel="stylesheet" href="../css/style.css">
 </head>
@@ -49,16 +51,24 @@
 	<canvas id="canvas0" class="canvas" width="getCanvasWidth()" height="getCanvasHeight()"></canvas>
 	<canvas id="canvas1" class="canvas" width="getCanvasWidth()" height="getCanvasHeight()"></canvas>
 	<canvas id="canvas2" class="canvas" width="getCanvasWidth()" height="getCanvasHeight()"></canvas>
-	<p id="resultDisplay"></p>
-	<p id="hpDisplay"></p>
-	<p id="levelDisplay"></p>
+	<!-- <p id="resultDisplay"></p> -->
+	<!-- <p id="hpDisplay"></p> -->
+	<!-- <p id="levelDisplay"></p> -->
+	
 	
 	<div id="questionWindow">
+		<div id="hpDisplay">
+			<div id="one"></div>
+			<div id="two"></div>
+			<div id="three"></div>
+		</div>
 		<p id="questionDisplay"></p>
 		<div id="hintDisplay">
-			<span>test</span>
+			<span></span>
 		</div>
-		<input id="userAnswerInput" type="text">
+		<button id="showHint" onclick="hintDisplay()">?</button>
+		<!-- <button id="giveMeFirstLetter"></button> -->
+		<input id="userAnswerInput" type="text" onfocus='clearHint()'>
 	</div>
 
 	

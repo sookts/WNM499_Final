@@ -46,19 +46,37 @@ body {
 #questionWindow input:focus {
   outline: none;
 }
+#questionWindow #hpDisplay {
+  position: absolute;
+  top: -25px;
+  right: 0;
+  width: 69px;
+  height: 20px;
+}
+#questionWindow #hpDisplay div {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background: url("../assets/UI/hp.svg") no-repeat;
+}
 #questionWindow #questionDisplay {
   color: white;
+  font-family: "Open Sans", sans-serif;
+  width: 90%;
   position: absolute;
-  top: 0;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  margin: 0;
 }
 #questionWindow #hintDisplay {
   position: absolute;
-  display: none;
-  bottom: 0;
+  bottom: 8px;
 }
 #questionWindow #userAnswerInput {
   position: absolute;
-  bottom: 0;
+  bottom: 8px;
 }
 
 #hintDisplay {
@@ -86,13 +104,6 @@ body {
   position: relative;
 }
 
-#hpDisplay {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  color: #FFF;
-}
-
 #levelDisplay {
   position: absolute;
   bottom: 30px;
@@ -118,6 +129,7 @@ body {
 }
 
 #loading > label {
+  font-family: "Open Sans", sans-serif;
   position: absolute;
   bottom: 40%;
   left: 50%;
@@ -134,6 +146,22 @@ body {
 
 .right {
   animation: rightGreen 1s forwards;
+}
+
+#showHint {
+  position: absolute;
+  right: 8px;
+  bottom: 40px;
+  background: none;
+  border: none;
+  color: white;
+}
+#showHint:focus {
+  outline: none;
+}
+
+#giveMeFirstLetter {
+  position: absolute;
 }
 
 @keyframes loadingDone {

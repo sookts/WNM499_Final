@@ -170,8 +170,8 @@ if(initialize == true){
 
 //Initialize
 function init(){
-	var resultDisplay = document.getElementById("resultDisplay");
-	resultDisplay.innerHTML = "";
+	// var resultDisplay = document.getElementById("resultDisplay");
+	// resultDisplay.innerHTML = "";
     currentStep = 0;
 	hp = 3;
 	displayHitPoint();
@@ -204,6 +204,8 @@ function displayQuestion(qa,lv){
 		var randomQuestion = qa[lv][questionNumber];
 		// console.log("questionNumber",questionNumber)
 		questionDisplay.innerHTML = randomQuestion.question;
+		hamilton = randomQuestion.hint;
+		console.log("hint",randomQuestion.hint)
 		currentQuestion = randomQuestion;
 		deleteQuestion(qa,lv);
 	}else{
@@ -224,9 +226,9 @@ function displayResult(rw){
 			color = "#65ff89"
 		break;
 	}
-	var resultDisplay = document.getElementById("resultDisplay");
-	resultDisplay.innerHTML = result;
-	resultDisplay.style.color = color;
+	// var resultDisplay = document.getElementById("resultDisplay");
+	// resultDisplay.innerHTML = result;
+	// resultDisplay.style.color = color;
 }
 
 // @param {object} the question and answer from JSON
@@ -290,7 +292,30 @@ function deleteQuestion(qa,lv){
 
 function displayHitPoint(){
 	var hpDisplay = document.getElementById("hpDisplay");
-	hpDisplay.innerHTML = "LIFE " + hp;
+	var num = {
+		one: document.getElementById("one"),
+		two: document.getElementById("two"),
+		three: document.getElementById("three")
+	}
+	// hpDisplay.innerHTML = "LIFE " + hp;
+	if(hp == 3){
+		num.one.style.display = "inline-block";
+		num.two.style.display = "inline-block";
+		num.three.style.display = "inline-block";
+	}else if(hp == 2){
+		num.one.style.display = "inline-block";
+		num.two.style.display = "inline-block";
+		num.three.style.display = "none";
+	}else if(hp == 1){
+		num.one.style.display = "inline-block";
+		num.two.style.display = "none";
+		num.three.style.display = "none";
+	}else{
+		num.one.style.display = "none";
+		num.two.style.display = "none";
+		num.three.style.display = "none";
+	}
+	console.log(hpDisplay.childNodes[0].nodeValue)
 }
 
 function gotDamage(){
@@ -301,7 +326,7 @@ function displayLevel(){
 	var levelDisplay = document.getElementById("levelDisplay");
 	currentLevel = levelControl();
 	currentLevelNum = currentLevelInString(currentLevel)
-	levelDisplay.innerHTML = "LEVEL " + currentLevel;
+	// levelDisplay.innerHTML = "LEVEL " + currentLevel; 
 }
 
 function levelControl(){
@@ -336,17 +361,27 @@ function gameClear(){
 
 // var displayHintTimer = setInterval(something,1000)
 
-function showHint(qa,lv){
-	// var thisQuestion = qa[lv][questionNumber];
-	var hintDisplay = document.getElementById("histDisplay");
-	for(var i = 0; i < qa[lv][questionNumber].answer.length; i++){
-		setTimeout(
-			function(){
-				console.log("working")
-				hintDisplay.value = qa[lv][questionNumber].answer.substr(0,i)
-			},3000)
-	}
+// function showHint(qa,lv){
+// 	// var thisQuestion = qa[lv][questionNumber];
+// 	// var hintDisplay = document.getElementById("hintDisplay");
+// 	for(var i = 0; i < qa[lv][questionNumber].answer.length; i++){
+// 		setTimeout(
+// 			function(){
+// 				console.log("working")
+// 				hintDisplay.value = qa[lv][questionNumber].answer.substr(0,i)
+// 			},3000)
+// 	}
+// }
+
+function hintDisplay(){
+	var hint = document.getElementById("hintDisplay");
+	hint.innerHTML = hamilton;
 }
+
+function clearHint(){
+	var input = document.getElementById("hintDisplay");
+	input.innerHTML = "";
+};
 
 function currentLevelInString(levelString){
 	switch (levelString){

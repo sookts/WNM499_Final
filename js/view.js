@@ -74,9 +74,9 @@ var treeAmountForOneSide = 15
 
 
 
-addEventListener("click",function(){
-	console.log(currentStep);
-})
+// addEventListener("click",function(){
+// 	console.log(currentStep);
+// })
 
 window.onload = function(){
 	for(var i = 0; i < canvasLayerAmount; i++){
