@@ -131,8 +131,8 @@ html,body{
 		font-weight: 400;
 		margin-bottom: 0;
 
-		position: relative;
-		left: -120px;
+		// position: relative;
+		// left: -120px;
 		// position: relative;
 		// left: -120px;
 		transition: all 0.3s ease;
@@ -145,9 +145,9 @@ html,body{
 		}	
 		@include breakpoint(0px 649px){
 			font-size:30px;
-			position: static;
-			float: left;
-			margin-left: 10%
+			// position: static;
+			// float: left;
+			// margin-left: 10%
 			// position: static;
 			// float: left;
 			// margin-left: 10%
@@ -588,7 +588,7 @@ footer{
 		font-size: 20px;
 		color: white;
 		@include breakpoint(0px 1000px){
-			text-align: justify;
+			// text-align: justify;
 			font-size: 20px;
 		}
 	}
@@ -599,7 +599,7 @@ footer{
 		}
 	}
 	.text1{
-		width: 80%;
+		// width: 80%;
 		// width: 80%;
 		max-width: 600px;
 		float: right;
@@ -610,7 +610,7 @@ footer{
 		}
 	}
 	.text2{
-		width: 80%;
+		// width: 80%;
 		max-width: 600px;
 		float: left;
 		margin-top: 100px;
@@ -689,7 +689,7 @@ footer{
 			font-size: 35px;
 			color: white;
 			font-weight: 400;
-			// margin: 200px 200px 0 200px;
+			margin:50px 0;
 			transition: all 0.3s ease;
 	      	-webkit-transition: all 0.3s ease;
 

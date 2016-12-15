@@ -113,8 +113,6 @@ html, body {
   color: white;
   font-weight: 400;
   margin-bottom: 0;
-  position: relative;
-  left: -120px;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
 }
@@ -131,9 +129,6 @@ html, body {
 @media (min-width: 0px) and (max-width: 649px) {
   .firstscreen h2 {
     font-size: 30px;
-    position: static;
-    float: left;
-    margin-left: 10%;
   }
 }
 .firstscreen .textbox {
@@ -655,7 +650,6 @@ footer p {
 }
 @media (min-width: 0px) and (max-width: 1000px) {
   .aboutscreen p {
-    text-align: justify;
     font-size: 20px;
   }
 }
@@ -665,7 +659,6 @@ footer p {
   }
 }
 .aboutscreen .text1 {
-  width: 80%;
   max-width: 600px;
   float: right;
 }
@@ -677,7 +670,6 @@ footer p {
   }
 }
 .aboutscreen .text2 {
-  width: 80%;
   max-width: 600px;
   float: left;
   margin-top: 100px;
@@ -773,6 +765,7 @@ footer p {
   font-size: 35px;
   color: white;
   font-weight: 400;
+  margin: 50px 0;
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
 }
