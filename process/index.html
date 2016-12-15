@@ -3,14 +3,91 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Process</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="../css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<script src="../js/jquery-1.12.4.js"></script>
+	<script src="../js/jquery-ui.min.js"></script>
 </head>
 <body>
-<nav id="navigationBar"></nav>
-<script type="text/javascript" src="../js/nav.js"></script><!-- Load Navigation Bar -->
-
-	<div><!-- week1 -->
-		<p>We start from ideas</p>
+	<div class="navBody">
+		<a class="navClose" href="#"><img src="../assets/images/close.svg" alt="close"></a>
+		<ul>
+			<a href="../index.html">
+				<li>story</li>
+			</a>
+			<a href="../game/index.html">
+				<li>game</li>
+			</a>
+			<a href="../about/index.html">
+				<li>about</li>
+			</a>
+			<a href="#">
+				<li>process</li>
+			</a>
+		</ul>
 	</div>
+	<div class="aboutscreen">
+	<div class="processscreen">
+		<nav id="navigationBar">
+			<a href="#">
+				<h1>Bunnytime</h1>
+			</a>
+			<ul>
+				<a href="../index.html">
+					<li>story</li>
+				</a>
+				<a href="../game/index.html">
+					<li>game</li>
+				</a>
+				<a href="../about/index.html">
+					<li>about</li>
+				</a>
+				<a href="#">
+					<li>process</li>
+				</a>
+			</ul>
+			<a class="navButton" href="#"><img src="../assets/images/navButton.svg" alt="menu"></a>
+		</nav>
+		<div class="processbox">
+		<h2>environment design</h2>
+			<img src="../assets/images/tree_process_big.png" alt="tree">
+			<p>The environment design started off with some research into various games and their
+	environments. After browsing many different styles, we settled on a semi-flat
+	whimsical style for both the environment and characters. From there on, the first tree
+	was sketched, the Bunnytime environment style was established, and we were off! </p>
+			<img src="../assets/images/scroll_process_big.png" alt="scroll">
+			<p>The scroll was one of our first ideas for art assets. We thought it would be fun and
+	engaging if users could “interact” with the story. So to convey the kidnapping of our
+	character’s grandpa, we utilized the live scrolling parchment on our story page. </p>
+			<h2>character design</h2>
+			<img src="../assets/images/monster_process_big.png" alt="monster">
+			<p>I wanted to create characters that would be appealing to everyone. The main design choice for our monster illustrations is an in between of aggressive, yet still cute. 
+	The design of our main character, the bunny, was inspired by the Adventure Times main character, Finn. I chose not to use a human character because since we're in a forest, we usually find rabbits in the forrest, and so our main character became a hybrid between a rabbit and a person. </p>
+			<h2>tech team</h2>
+			<img src="../assets/images/web_process.png" alt="web development">
+			<p>With the help of Sass and Compass, the web development is faster than expected. For the HTML and CSS, the most challenging part is to make the responsive navigation bar (hamburger menu for mobile version) and make the scroll looks good at every screen size. </p>
+			<img src="../assets/images/concept_process.png" alt="concept">
+			
+			<p>How it works<br><br>
+
+			
+			1. Pick random trees<br>
+			2. Place them in as a layer randomly<br>
+			3. Place them in as a layer randomly</p>
+			
+
+		</div>
+
+	</div>
+<script>
+	$( '.navButton' ).click(function() {
+	  $( ".navBody" ).show( "fade" );
+	});
+	$( '.navClose' ).click(function() {
+	  $( ".navBody" ).hide( "fade" );
+	});
+</script>
 </body>
 </html>

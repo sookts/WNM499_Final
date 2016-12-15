@@ -4,28 +4,90 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/> <!--320-->
 	<title>Story Game</title>
-	<link rel="stylesheet" href="../css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
 	<link rel="stylesheet" href="../css/game.css">
+	<link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 
-<nav id="navigationBar"></nav>
-<script type="text/javascript" src="../js/nav.js"></script><!-- Load Navigation Bar -->
+	<!-- <div class="navBody">
+		<a class="navClose" href="#"><img src="../assets/images/close.svg" alt="close"></a>
+		<ul>
+			<a href="#">
+				<li>story</li>
+			</a>
+			<a href="game/index.html">
+				<li>game</li>
+			</a>
+			<a href="about/index.html">
+				<li>about</li>
+			</a>
+			<a href="process/index.html">
+				<li>process</li>
+			</a>
+		</ul>
+	</div> -->
+	<nav id="navigationBar" class="navSetGamePage">
+		<a href="#">
+			<h1>Bunnytime</h1>
+		</a>
+		<ul>
+			<a href="../index.html">
+				<li>story</li>
+			</a>
+			<a href="../game/index.html">
+				<li>game</li>
+			</a>
+			<a href="../about/index.html">
+				<li>about</li>
+			</a>
+			<a href="../process/index.html">
+				<li>process</li>
+			</a>
+		</ul>
+	</nav>
 
-<label id="resultDisplay"></label>
-	<p id="hpDisplay"></p>
-	<p id="levelDisplay"></p>
+	<canvas id="canvas0" class="canvas" width="getCanvasWidth()" height="getCanvasHeight()"></canvas>
+	<canvas id="canvas1" class="canvas" width="getCanvasWidth()" height="getCanvasHeight()"></canvas>
+	<canvas id="canvas2" class="canvas" width="getCanvasWidth()" height="getCanvasHeight()"></canvas>
+	<canvas id="canvas3" class="canvas" width="getCanvasWidth()" height="getCanvasHeight()"></canvas>
+
+	<!-- <p id="resultDisplay"></p> -->
+	<!-- <p id="hpDisplay"></p> -->
+	<!-- <p id="levelDisplay"></p> -->
 	
+
 	<div id="questionWindow">
+		<div id="hpDisplay">
+			<div id="one"></div>
+			<div id="two"></div>
+			<div id="three"></div>
+		</div>
 		<p id="questionDisplay"></p>
-		<input id="userAnswerInput" type="text">
-		<span id="hintDisplay">test</span>
-		
-		
+		<div id="hintDisplay">
+			<span></span>
+		</div>
+		<button id="showHint" onclick="hintDisplay()">?</button>
+		<!-- <button id="giveMeFirstLetter"></button> -->
+		<input id="userAnswerInput" type="text" onfocus='clearHint()'>
 	</div>
 
-	<canvas id="canvas"></canvas>
+	
+	<div id="loading">
+		<label>Loading</label>
+	</div>
 </body>
-<script type="text/javascript" src="../js/script.js"></script>
+
+<script type="text/javascript" src="../js/variable.js"></script>
 <script type="text/javascript" src="../js/view.js"></script>
+<script type="text/javascript" src="../js/script.js"></script>
+
+
+<script>
+for(var i = 0; i < canvasLayerAmount; i++){
+	document.getElementById("canvas"+i).width = window.innerWidth;
+	document.getElementById("canvas"+i).height = window.innerHeight;
+	}
+</script>
 </html>
