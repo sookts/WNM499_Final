@@ -137,9 +137,6 @@ body {
   #showHint:focus {
     outline: none; }
 
-#giveMeFirstLetter {
-  position: absolute; }
-
 @keyframes loadingDone {
   0% {
     opacity: 1; }

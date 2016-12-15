@@ -463,7 +463,6 @@ html, body {
 @media (min-width: 0) and (max-width: 549px) {
   .scroll_body {
     width: 100%;
-    /*background-size:100% 100%;*/
   }
 }
 .scroll_body p {
@@ -612,6 +611,17 @@ footer p {
     padding-top: 0;
   }
 }
+@media (min-width: 500px) and (max-width: 830px) {
+  .aboutscreen .aboutbox {
+    padding-top: 0;
+  }
+}
+@media (min-width: 0) and (max-width: 500px) {
+  .aboutscreen .aboutbox {
+    padding-top: 0;
+    width: 90%;
+  }
+}
 .aboutscreen h2 {
   font-family: 'Nova Mono', monospace;
   font-size: 35px;
@@ -646,6 +656,7 @@ footer p {
 @media (min-width: 0px) and (max-width: 1000px) {
   .aboutscreen p {
     text-align: justify;
+    font-size: 20px;
   }
 }
 @media (min-width: 0px) and (max-width: 830px) {
@@ -739,4 +750,44 @@ footer p {
   .aboutscreen .monster_4_responsive {
     display: block;
   }
+}
+
+.processscreen {
+  height: auto;
+  width: 100%;
+  background-color: #00b084;
+}
+.processscreen .processbox {
+  width: 80%;
+  margin: 0px auto;
+  padding: 150px 0;
+}
+@media (min-width: 0) and (max-width: 500px) {
+  .processscreen .processbox {
+    padding: 20px 0;
+    width: 90%;
+  }
+}
+.processscreen .processbox h2 {
+  font-family: 'Nova Mono', monospace;
+  font-size: 35px;
+  color: white;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+}
+.processscreen .processbox p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 24px;
+  color: white;
+  margin: 50px 0;
+}
+@media (min-width: 0) and (max-width: 500px) {
+  .processscreen .processbox p {
+    font-size: 20px;
+  }
+}
+.processscreen .processbox img {
+  width: 100%;
+  height: auto;
 }

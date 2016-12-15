@@ -160,10 +160,6 @@ body {
   outline: none;
 }
 
-#giveMeFirstLetter {
-  position: absolute;
-}
-
 @keyframes loadingDone {
   0% {
     opacity: 1;

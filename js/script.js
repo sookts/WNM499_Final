@@ -205,7 +205,6 @@ function displayQuestion(qa,lv){
 		// console.log("questionNumber",questionNumber)
 		questionDisplay.innerHTML = randomQuestion.question;
 		hamilton = randomQuestion.hint;
-		console.log("hint",randomQuestion.hint)
 		currentQuestion = randomQuestion;
 		deleteQuestion(qa,lv);
 	}else{
@@ -315,7 +314,6 @@ function displayHitPoint(){
 		num.two.style.display = "none";
 		num.three.style.display = "none";
 	}
-	console.log(hpDisplay.childNodes[0].nodeValue)
 }
 
 function gotDamage(){
@@ -382,6 +380,20 @@ function clearHint(){
 	var input = document.getElementById("hintDisplay");
 	input.innerHTML = "";
 };
+
+function currentLevelInString(levelString){
+	switch (levelString){
+		case "easy":
+		return 0
+		break;
+		case "normal":
+		return 1
+		break;
+		case "hard":
+		return 2
+		break;
+	}
+}
 
 function currentLevelInString(levelString){
 	switch (levelString){

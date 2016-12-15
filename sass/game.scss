@@ -116,12 +116,6 @@ body{
 	position:relative;
 }
 
-// #hpDisplay{
-// 	position:absolute;
-// 	bottom: 10px;
-// 	left: 10px;
-// 	color: #FFF;
-// }
 
 #levelDisplay{
 	position:absolute;
@@ -149,6 +143,7 @@ body{
 
 #loading > label{
 	font-family: "Open Sans", sans-serif;
+
 	position:absolute;
 	bottom:40%;
 	left:50%;
@@ -182,9 +177,9 @@ body{
 	}
 }
 
-#giveMeFirstLetter{
-	position: absolute;
-}
+// #giveMeFirstLetter{
+// 	position: absolute;
+// }
 
 @keyframes loadingDone {
 	0%{
