@@ -22,7 +22,6 @@ var monstersSpriteArray = {
 	"dead": []
 }
 
-
 // var animMode = "attack";
 // var animStep = 0;
 var ctx = []
